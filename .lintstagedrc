@@ -1,0 +1,7 @@
+{
+    "*.{js,css,html,vue,ts,tsx}": [
+        "prettier --write",
+        "vue-cli-service lint",
+        "git add"
+    ],
+}
