@@ -7,12 +7,15 @@
   <p align="center">Persian tools wrapper for vue.js</p>
 	
 ![CI/CD](https://github.com/persian-tools/vue-persian-tools/actions/workflows/storybook.yml/badge.svg)
+![CI/CD](https://github.com/persian-tools/vue-persian-tools/actions/workflows/continuous-integration.yml/badge.svg)
+![codecov](https://codecov.io/gh/persian-tools/vue-persian-tools/branch/master/graph/badge.svg)
 [![GitHub license](https://img.shields.io/github/license/persian-tools/vue-persian-tools)](https://github.com/persian-tools/vue-persian-tools/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/persian-tools/vue-persian-tools/compare) 
 [![CodeFactor](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools/badge)](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b03e0adbfad2fea89faf/maintainability)](https://codeclimate.com/github/persian-tools/vue-persian-tools/maintainability)
 </div>
 
+[codecov](https://codecov.io/gh/mediv0/vue-input-validator/branch/master/graph/badge.svg)]](https://app.codecov.io/gh/persian-tools/vue-persian-tools)
 
 
 - - -
