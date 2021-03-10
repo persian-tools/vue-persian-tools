@@ -1,6 +1,6 @@
 {
     "name": "vue-persian-tools",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "private": false,
     "description": "Persian tools wrapper for vue.js",
     "author": "mediv0<mahdi.wtf>",
@@ -49,7 +49,7 @@
         "cz:init": "./node_modules/commitizen/bin/commitizen init cz-conventional-changelog --yarn --dev --exact",
         "cz": "npx cz",
         "release": "standard-version",
-        "release:minor": "standard-version -- --release-as minor"
+        "release:minor": "standard-version \"--release-as\" \"minor\""
     },
     "dependencies": {
         "@persian-tools/persian-tools": "^1.6.0-beta.4",
