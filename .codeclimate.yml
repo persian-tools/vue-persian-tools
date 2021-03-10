@@ -6,3 +6,5 @@ exclude_patterns:
 - "dev/"
 - "examples/"
 - "node_modules"
+- "stories/**/*"
+- "stories/"
