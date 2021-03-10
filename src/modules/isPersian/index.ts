@@ -1,22 +1,24 @@
 import { defineComponent, h } from "vue-demi";
 import { isPersian } from "@persian-tools/persian-tools";
-import { getSlot } from "../helper";
+import { getSlot } from "../helpers/getSlot.skip";
+import tag from "../helpers/tagPropMixin.skip";
 
 export default defineComponent({
     name: "isPersian",
+    mixins: [tag],
     props: {
-        args: {
+        str: {
             type: String,
             requied: true
         },
-        tag: {
-            type: String,
-            default: "span"
+        trimPattern: {
+            type: RegExp,
+            default: /["'-+()؟\s.]/g
         }
     },
     computed: {
         isFa(): boolean {
-            return isPersian(this.args!);
+            return isPersian(this.str!, this.trimPattern);
         }
     },
 
