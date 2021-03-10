@@ -1,11 +1,15 @@
 import isPersian from "../src/modules/isPersian/index";
 
+const generateRegex = (regString: string): RegExp => {
+    // convert user input to regex (only for storybook)
+    const match = regString.match(new RegExp("^/(.*?)/([gimy]*)$"));
+    return new RegExp(match[1], match[2]);
+};
+
 const Template = (args: any) => ({
     components: { isPersian },
     setup() {
-        // convert user input to regex (only for storybook)
-        const match = args.pattern.match(new RegExp("^/(.*?)/([gimy]*)$"));
-        const regex = new RegExp(match[1], match[2]);
+        const regex = generateRegex(args.pattern);
         return {
             text: args.val,
             trim: regex
