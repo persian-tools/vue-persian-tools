@@ -31,6 +31,16 @@ development
 yarn storybook
 ```
 
+---
+<br />
+
+### `tag prop`
+every component accept a `tag` prop. you can use it to customize component html tag. default is `span`
+```js
+<is-persian tag="div"></is-persian>
+```
+
+
 ### `isPersian`
 
 **props**
@@ -38,7 +48,6 @@ yarn storybook
 | name          | default value   |  description                                  |
 | ------------- |:-------------   | :---------------------------------------------|
 | text          | null            | `Text to be evaluated.`                       |       
-| tag           | span            | `default vue slot html tag`                   |   
 
 **scoped slots**
 
