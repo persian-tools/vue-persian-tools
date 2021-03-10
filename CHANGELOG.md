@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/persian-tools/vue-persian-tools/compare/v0.1.0...v0.1.1) (2021-03-10)
+
+
+### Features
+
+* change text prop to args ([c8c330c](https://github.com/persian-tools/vue-persian-tools/commit/c8c330c23b0393d889c3ff925b04fc83e2c6041e))
+
 ## 0.1.0 (2021-03-10)
 
 
