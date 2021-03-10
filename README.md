@@ -45,9 +45,10 @@ every component accept a `tag` prop. you can use it to customize component html 
 
 **props**
 
-| name          | default value   |  description                                  |
-| ------------- |:-------------   | :---------------------------------------------|
-| text          | null            | `Text to be evaluated.`                       |       
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| text `required` | string          | `Text to be evaluated.`                       |  null         |       
+| trimPattern     | RegExp          | `characters which you want to trim from the string.` |  `/["'-+()؟\s.]/g`         | 
 
 **scoped slots**
 
