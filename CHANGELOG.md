@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.1.1...v0.2.0) (2021-03-10)
+
+
+### Features
+
+* add URLfix module ([f2bbbe1](https://github.com/persian-tools/vue-persian-tools/commit/f2bbbe15a1c2ba1cdcf85821bacc62265272a4e2))
+* **ispersian:** add trimPattern argument to isPersian module ([82334bf](https://github.com/persian-tools/vue-persian-tools/commit/82334bf0fe83082ddb77e36e7054ee875eca689a))
+
 ### [0.1.1](https://github.com/persian-tools/vue-persian-tools/compare/v0.1.0...v0.1.1) (2021-03-10)
 
 
