@@ -11,3 +11,4 @@ export default install;
 
 // export components
 export { default as isPersian } from "./modules/isPersian";
+export { default as URLfix } from "./modules/URLfix";
