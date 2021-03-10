@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { isVue3 } from "vue-demi";
 
 export function getSlot(Vue: any, props: Record<string, any>): Record<string, any> {
