@@ -15,8 +15,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b03e0adbfad2fea89faf/maintainability)](https://codeclimate.com/github/persian-tools/vue-persian-tools/maintainability)
 </div>
 
-[codecov](https://codecov.io/gh/mediv0/vue-input-validator/branch/master/graph/badge.svg)]](https://app.codecov.io/gh/persian-tools/vue-persian-tools)
-
 
 - - -
 
