@@ -3,7 +3,7 @@ on:
   push:
     paths: ["stories/**"] # Trigger the action only when files change in the folders defined here
 jobs:
-  build-and-deploy:
+  storybook-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
