@@ -4,6 +4,6 @@ module.exports = {
         "^.+\\.vue$": "vue-jest"
     },
     coverageDirectory: "coverage",
-    collectCoverageFrom: ["./src/modules/**/*.ts", "!./src/modules/index.ts", "!./src/modules/helper.ts"],
+    collectCoverageFrom: ["./src/modules/**/*.ts", "!src/modules/**/*.skip.ts", "!./src/modules/index.ts"],
     collectCoverage: true
 };
