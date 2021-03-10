@@ -1,6 +1,8 @@
 name: Storybook Build
 on: 
   push:
+    branches:
+      - master
     paths: ["stories/**"] # Trigger the action only when files change in the folders defined here
 jobs:
   storybook-build:
@@ -21,4 +23,4 @@ jobs:
           BRANCH: "gh-pages" # The branch the action should deploy to.
           FOLDER: docs-build # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: docs # The folder that we serve our Storybook files from
+          TARGET_FOLDER: . # The folder that we serve our Storybook files from
