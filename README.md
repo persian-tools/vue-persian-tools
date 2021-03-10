@@ -21,14 +21,29 @@ yarn test
 development
 
 ```
-yarn dev
+yarn storybook
 ```
+
+### `isPersian`
+
+**props**
+
+| name          | default value   |  description                                  |
+| ------------- |:-------------   | :---------------------------------------------|
+| text          | null            | `Text to be evaluated.`                       |       
+| tag           | span            | `default vue slot html tag`                   |   
+
+**scoped slots**
+
+| scope          | return type     | 
+| -------------  |:-------------  |
+| isPersian      | boolean         |      
 
 ### Todos
 
 **`modules`**
 
-- [ ] isPersian
+- [x] isPersian
 - [ ] URLfix
 - [ ] addOrdinalSuffix
 - [ ] bill
@@ -48,3 +63,15 @@ yarn dev
 - [ ] verifyCardNumber
 - [ ] wordsToNumber
 - [ ] isArabic
+
+
+## Contributing
+
+Thank you for your interest in contributing! Please feel free to put up a PR for any issue or feature request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/persian-tools/vue-persian-tools/blob/master/LICENSE) file for details.
+
+## Changelogs
+- [changelog](https://github.com/persian-tools/vue-persian-tools/blob/master/CHANGELOG.md)
