@@ -2,11 +2,16 @@
 	<p align="center">
 		<img src="https://github.com/persian-tools/react-persian-tools/raw/master/images/logo.png" width="200">
 	</p>
-	<h1 align="center">Vue persian tools</h1>
+  <h1 align="center">Vue persian tools</h1>
   <h2 align="center">[Work In Progress]</h2>
-	<p align="center">Persian tools wrapper for vue.js</p>
+  <p align="center">Persian tools wrapper for vue.js</p>
+	
+![CI/CD](https://github.com/persian-tools/vue-persian-tools/actions/workflows/storybook.yml/badge.svg)
+[![GitHub license](https://img.shields.io/github/license/persian-tools/vue-persian-tools)](https://github.com/persian-tools/vue-persian-tools/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/persian-tools/vue-persian-tools/compare) 
 </div>
-<hr />
+
+
 
 - - -
 
