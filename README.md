@@ -57,12 +57,29 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------  |:-------------  |
 | isPersian      | boolean         |      
 
+
+---
+
+### `URLfix`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| url `required` | string           | `url that need to be fixed`                   |  null         |        
+
+**scoped slots**
+
+| scope          | return type     | 
+| -------------  |:-------------  |
+| url            | string         |   
+
 ### Todos
 
 **`modules`**
 
 - [x] isPersian
-- [ ] URLfix
+- [x] URLfix
 - [ ] addOrdinalSuffix
 - [ ] bill
 - [ ] commas
