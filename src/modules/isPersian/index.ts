@@ -5,7 +5,7 @@ import { getSlot } from "../helper";
 export default defineComponent({
     name: "isPersian",
     props: {
-        text: {
+        args: {
             type: String,
             requied: true
         },
@@ -16,7 +16,7 @@ export default defineComponent({
     },
     computed: {
         isFa(): boolean {
-            return isPersian(this.text!);
+            return isPersian(this.args!);
         }
     },
 
