@@ -7,7 +7,7 @@ describe("isPersian", () => {
         components: {
             fa: isPersian
         },
-        template: "<div><fa :args=txt v-slot='{isPersian}'>{{ isPersian }}</fa></div>"
+        template: "<div><fa :str=txt v-slot='{isPersian}'>{{ isPersian }}</fa></div>"
     };
     it("should return true if is given text is Persian", async () => {
         const wrapper = mount(cmp, {
@@ -39,7 +39,7 @@ describe("isPersian", () => {
             components: {
                 fa: isPersian
             },
-            template: "<div><fa tag='p' args='random text' v-slot='{isPersian}'>{{ isPersian }}</fa></div>"
+            template: "<div><fa tag='p' str='random text' v-slot='{isPersian}'>{{ isPersian }}</fa></div>"
         };
 
         const wrapper = mount(cmp);
