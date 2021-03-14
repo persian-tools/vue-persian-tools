@@ -51,7 +51,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 | text `required` | string          | `Text to be evaluated.`                       |  null         |       
 | trimPattern     | RegExp          | `characters which you want to trim from the string.` |  `/["'-+()؟\s.]/g`         | 
 
-**scoped slots**
+**slots**
 
 | scope          | return type     | 
 | -------------  |:-------------  |
@@ -68,11 +68,28 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------   |:-------------   | :---------------------------------------------| :-----------  |
 | url `required` | string           | `url that need to be fixed`                   |  null         |        
 
-**scoped slots**
+**slots**
 
 | scope          | return type     | 
 | -------------  |:-------------  |
 | url            | string         |   
+
+
+---
+
+### `hasPersian`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| str `required` | string           | `Check if string includes persian alphabet.`  |  null         |        
+
+**slots**
+
+| scope          | return type     | 
+| -------------  |:-------------  |
+| hasPersian     | boolean         |   
 
 ### Todos
 
@@ -80,7 +97,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 
 - [x] isPersian
 - [x] URLfix
-- [ ] hasPersian
+- [x] hasPersian
 - [ ] addOrdinalSuffix
 - [ ] bill
 - [ ] commas
