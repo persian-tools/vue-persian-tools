@@ -18,7 +18,7 @@ export default {
     component: hasPersian,
     argTypes: {
         val: {
-            name: "text",
+            name: "str",
             type: { name: "string", required: true },
             defaultValue: null,
             description: "Check if string includes persian alphabet.",
