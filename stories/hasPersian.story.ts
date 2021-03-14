@@ -7,7 +7,7 @@ const Template = (args: any) => ({
             text: args.val
         };
     },
-    template: '<hasPersian :text="text" v-slot="{ hasPersian }">is string contains persian chars: <b>{{ hasPersian }}</b></hasPersian>'
+    template: '<hasPersian :str="text" v-slot="{ hasPersian }">is string contains persian chars: <b>{{ hasPersian }}</b></hasPersian>'
 });
 
 export const Default = Template.bind({});

@@ -7,14 +7,14 @@ export default defineComponent({
     name: "hasPersian",
     mixins: [tag],
     props: {
-        text: {
+        str: {
             type: String,
             requied: true
         }
     },
     computed: {
         hasPersianInText(): boolean {
-            return hasPersian(this.text!);
+            return hasPersian(this.str!);
         }
     },
 

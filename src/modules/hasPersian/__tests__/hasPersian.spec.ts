@@ -7,7 +7,7 @@ describe("hasPersian", () => {
         components: {
             hasPersian
         },
-        template: "<div><hasPersian :text=val v-slot='{ hasPersian }'>{{ hasPersian }}</hasPersian></div>"
+        template: "<div><hasPersian :str=val v-slot='{ hasPersian }'>{{ hasPersian }}</hasPersian></div>"
     };
     it("should return true if text contains persian values", async () => {
         const wrapper = mount(cmp, {
