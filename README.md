@@ -107,6 +107,24 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------  |:-------------  |
 | text           | string         |   
 
+
+---
+
+### `Sheba`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| shebaCode `required` | string     | `Your sheba code.`  |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| isValid        | boolean            |
+| info           | ShebaResult \| null |
+
 ### Todos
 
 **`modules`**
@@ -126,7 +144,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] numberToWords
 - [ ] phoneNumber
 - [ ] removeOrdinalSuffix
-- [ ] sheba
+- [x] sheba
 - [ ] sortText
 - [x] toPersianChars
 - [ ] verifyCardNumber
