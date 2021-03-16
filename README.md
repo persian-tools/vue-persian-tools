@@ -90,6 +90,23 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------  |:-------------  |
 | hasPersian     | boolean         |   
 
+
+---
+
+### `toPersianChars`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| str `required` | string           | `Convert given text to persian.`  |  null         |        
+
+**slots**
+
+| scope          | return type     | 
+| -------------  |:-------------  |
+| text           | string         |   
+
 ### Todos
 
 **`modules`**
@@ -111,7 +128,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] removeOrdinalSuffix
 - [ ] sheba
 - [ ] sortText
-- [ ] toPersianChars
+- [x] toPersianChars
 - [ ] verifyCardNumber
 - [ ] wordsToNumber
 - [ ] isArabic
