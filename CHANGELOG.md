@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.3.0...v0.4.0) (2021-03-16)
+
+
+### Features
+
+* add toPersianChars module ([e06d170](https://github.com/persian-tools/vue-persian-tools/commit/e06d170c9754a7b00722bd37e632cb8f5e8cdd3c))
+
+
+### Bug Fixes
+
+* **haspersian:** change text prop to str ([2d4db4e](https://github.com/persian-tools/vue-persian-tools/commit/2d4db4e9d2d1a97ef01ba28d0f7b835f56fe803d))
+
 ## [0.3.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.2.0...v0.3.0) (2021-03-14)
 
 
