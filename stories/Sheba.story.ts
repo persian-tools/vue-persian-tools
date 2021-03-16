@@ -1,4 +1,4 @@
-import Sheba from "../src/modules/Sheba/index";
+import Sheba from "../src/modules/sheba/index";
 
 const Template = (args: any) => ({
     components: { Sheba },
