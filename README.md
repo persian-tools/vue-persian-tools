@@ -12,7 +12,6 @@
 [![GitHub license](https://img.shields.io/github/license/persian-tools/vue-persian-tools)](https://github.com/persian-tools/vue-persian-tools/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/persian-tools/vue-persian-tools/compare) 
 [![CodeFactor](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools/badge)](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools)
-[![Maintainability](https://api.codeclimate.com/v1/badges/b03e0adbfad2fea89faf/maintainability)](https://codeclimate.com/github/persian-tools/vue-persian-tools/maintainability)
 </div>
 
 
