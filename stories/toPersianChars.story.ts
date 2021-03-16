@@ -7,7 +7,7 @@ const Template = (args: any) => ({
             val: args.val
         };
     },
-    template: '<toPersianChars :str="val" v-slot="{ text }">converted text: <b>{{ text }}</b></toPersianChars>'
+    template: '<toPersianChars :str="val" v-slot="{ text }">converted to: <b>{{ text }}</b></toPersianChars>'
 });
 
 export const Default = Template.bind({});
