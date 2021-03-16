@@ -13,13 +13,13 @@ export default defineComponent({
         }
     },
     computed: {
-        hasPersianInText(): string | undefined {
+        convertToPersianChar(): string | undefined {
             return toPersianChars(this.str!);
         }
     },
 
     render() {
-        const __SLOTS__ = getSlot(this, { text: this.hasPersianInText });
+        const __SLOTS__ = getSlot(this, { text: this.convertToPersianChar });
         return h(this.tag, __SLOTS__);
     }
 });
