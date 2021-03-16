@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.4.0...v0.5.0) (2021-03-16)
+
+
+### Features
+
+* add Sheba module ([15e0cf2](https://github.com/persian-tools/vue-persian-tools/commit/15e0cf2ee0c501300e69df0ba842d3fa9c5b39a3))
+
 ## [0.4.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.3.0...v0.4.0) (2021-03-16)
 
 
