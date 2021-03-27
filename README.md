@@ -125,6 +125,23 @@ every component accept a `tag` prop. you can use it to customize component html 
 | isValid        | boolean            |
 | info           | ShebaResult \| null |
 
+
+---
+
+### `halfSpace`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| str `required`  | string          | `Replace spaces for given text with halfspace..` |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| text           | string             |
+
 ### Todos
 
 **`modules`**
@@ -139,7 +156,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] extractCardNumbers
 - [ ] getBankNameFromCardNumber
 - [ ] getPlaceByIranNationalId
-- [ ] halfSpace
+- [x] halfSpace
 - [ ] nationalId
 - [ ] numberToWords
 - [ ] phoneNumber
