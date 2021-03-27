@@ -1,5 +1,15 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.6.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.4.0...v0.6.0) (2021-03-27)
+
+
+### Features
+
+* add halfSpace module ([6e31409](https://github.com/persian-tools/vue-persian-tools/commit/6e3140921a8964e685435477763393c9cc6437e6))
+* add Sheba module ([15e0cf2](https://github.com/persian-tools/vue-persian-tools/commit/15e0cf2ee0c501300e69df0ba842d3fa9c5b39a3))
+
 ## [0.5.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.4.0...v0.5.0) (2021-03-16)
 
 
