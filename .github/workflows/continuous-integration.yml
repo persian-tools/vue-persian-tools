@@ -31,16 +31,16 @@ jobs:
                   key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
             - name: Install dependencies
-              run: npm install --legacy-peer-deps
+              run: yarn install
 
             - name: Run the lints
-              run: npm run lint
+              run: yarn lint
 
             - name: Run Prettier
-              run: npm run pretty
+              run: yarn pretty
 
             - name: Run the tests
-              run: npm run test
+              run: yarn test
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v1
