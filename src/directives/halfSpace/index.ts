@@ -1,33 +1,47 @@
-// import { isVue3 } from "vue-demi";
+import { isVue3 } from "vue-demi";
 import { halfSpace } from "@persian-tools/persian-tools";
-import { ObjectDirective } from "vue";
+import { Directive, DirectiveBinding } from "../helpers/utils";
 
+const setElementText = (el: HTMLInputElement) => {
+    if (el.value) {
+        el.value = halfSpace(el.value) as string;
+    } else if (el.innerText) {
+        el.innerText = halfSpace(el.innerText) as string;
+    } else if (el.textContent) {
+        el.textContent = halfSpace(el.textContent) as string;
+    }
+};
 const inputEvent = (e: Event) => {
     const target = e.target as HTMLInputElement;
     if (!target) return;
 
-    if (target.value) {
-        target.value = halfSpace(target.value) as string;
-    } else if (target.innerText) {
-        target.innerText = halfSpace(target.innerText) as string;
-    } else if (target.textContent) {
-        target.textContent = halfSpace(target.textContent) as string;
-    }
+    setElementText(target);
 };
 
-const halfSpaceDirective: ObjectDirective = {
-    mounted(el, binding) {
-        if (el.value) el.value = halfSpace(el.value);
-        else if (el.innerText) el.innerText = halfSpace(el.innerText);
-        else if (el.textContent) el.textContent = halfSpace(el.textContent);
-        if (binding.modifiers.sync) {
-            el.addEventListener("input", inputEvent);
-        }
-    },
-    unmounted(el, binding) {
-        if (binding.modifiers.sync) {
-            el.removeEventListener("input", inputEvent);
-        }
+function mounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    setElementText(el);
+    if (binding.modifiers.sync) {
+        el.addEventListener("input", inputEvent);
     }
-};
+}
+function unmounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    if (binding.modifiers.sync) {
+        el.removeEventListener("input", inputEvent);
+    }
+}
+
+let halfSpaceDirective: Directive;
+
+if (isVue3) {
+    halfSpaceDirective = {
+        mounted,
+        unmounted
+    };
+} else {
+    halfSpaceDirective = {
+        bind: mounted,
+        unbind: unmounted
+    };
+}
+
 export default halfSpaceDirective;
