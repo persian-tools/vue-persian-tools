@@ -142,6 +142,24 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------  |:-----------------  |
 | text           | string             |
 
+
+---
+
+### `addOrdinalSuffix`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| number `required`  | string          | `Add Ordinal suffix to given numbers.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| text           | string             |
+
+
 ### Todos
 
 **`modules`**
@@ -149,7 +167,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [x] isPersian
 - [x] URLfix
 - [x] hasPersian
-- [ ] addOrdinalSuffix
+- [x] addOrdinalSuffix
 - [ ] bill
 - [ ] commas
 - [ ] digits
