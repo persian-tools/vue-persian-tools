@@ -229,7 +229,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] getBankNameFromCardNumber
 - [ ] getPlaceByIranNationalId
 - [x] halfSpace
-- [ ] nationalId
+- [x] nationalId
 - [ ] numberToWords
 - [ ] phoneNumber
 - [x] removeOrdinalSuffix
