@@ -178,6 +178,23 @@ every component accept a `tag` prop. you can use it to customize component html 
 | text           | string             |
 
 
+---
+
+### `verifyIranianNationalId`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| nationalId `required`  | string - number        | `national id for validation.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| isValid           | boolean             |
+
+
 ### Todos
 
 **`modules`**
