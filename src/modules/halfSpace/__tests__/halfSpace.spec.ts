@@ -21,9 +21,10 @@ describe("halfSpace", () => {
         expect(wrapper.text()).toBe("نمی‌خواهی درخت‌ها را ببینیم؟");
     });
 
-    it("should be undefiend(empty) if prop is empty", () => {
-        const wrapper = mount(cmp);
-
-        expect(wrapper.text()).toBe("");
+    it("should throw an error if given prop is empty/not string", () => {
+        // passing no props
+        expect(() => {
+            mount(cmp);
+        }).toThrow();
     });
 });
