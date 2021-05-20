@@ -48,8 +48,9 @@
         "storybook:build": "build-storybook -o docs-build",
         "cz:init": "./node_modules/commitizen/bin/commitizen init cz-conventional-changelog --yarn --dev --exact",
         "cz": "npx cz",
-        "release": "standard-version",
-        "release:minor": "standard-version \"--release-as\" \"minor\""
+        "release:major": "standard-version \"--release-as\" \"major\"",
+        "release:minor": "standard-version \"--release-as\" \"minor\"",
+        "release:patch": "standard-version \"--release-as\" \"patch\""
     },
     "dependencies": {
         "@persian-tools/persian-tools": "^1.6.0-beta.4",
