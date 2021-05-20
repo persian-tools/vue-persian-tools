@@ -5,5 +5,6 @@ import halfSpace from "./halfSpace/index";
 import hasPersian from "./hasPersian/index";
 import sheba from "./sheba/index";
 import toPersianChars from "./toPersianChars/index";
+import removeOrdinalSuffix from "./removeOrdinalSuffix/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix };

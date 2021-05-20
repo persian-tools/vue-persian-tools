@@ -17,3 +17,4 @@ export { default as halfSpace } from "./modules/halfSpace";
 export { default as hasPersian } from "./modules/hasPersian";
 export { default as sheba } from "./modules/sheba";
 export { default as toPersianChars } from "./modules/toPersianChars";
+export { default as removeOrdinalSuffix } from "./modules/removeOrdinalSuffix";
