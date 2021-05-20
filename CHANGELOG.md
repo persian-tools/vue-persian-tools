@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.8.0...v0.9.0) (2021-05-20)
+
+
+### Features
+
+* add getPlaceByIranNationalId module ([c1e7851](https://github.com/persian-tools/vue-persian-tools/commit/c1e785128fbc33190b0caceb131dc18379569c1c))
+* add verifyIranianNationalId module ([60229da](https://github.com/persian-tools/vue-persian-tools/commit/60229daa895c8798395f3e1c3df03402f69bc982))
+
 ## [0.8.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.7.1...v0.8.0) (2021-05-20)
 
 
