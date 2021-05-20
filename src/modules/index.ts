@@ -7,5 +7,6 @@ import sheba from "./sheba/index";
 import toPersianChars from "./toPersianChars/index";
 import removeOrdinalSuffix from "./removeOrdinalSuffix/index";
 import verifyIranianNationalId from "./nationalId/verifyIranianNationalId/index";
+import getPlaceByIranNationalId from "./nationalId/getPlaceByIranNationalId/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId };

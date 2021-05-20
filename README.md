@@ -195,6 +195,25 @@ every component accept a `tag` prop. you can use it to customize component html 
 | isValid           | boolean             |
 
 
+---
+
+### `getPlaceByIranNationalId`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| nationalId `required`  | string        | `user national id.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| city           | string             |
+| province           | string             |
+| codes           | string[] | number[]             |
+
+
 ### Todos
 
 **`modules`**

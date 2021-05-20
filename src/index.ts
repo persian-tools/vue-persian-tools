@@ -19,3 +19,4 @@ export { default as sheba } from "./modules/sheba";
 export { default as toPersianChars } from "./modules/toPersianChars";
 export { default as removeOrdinalSuffix } from "./modules/removeOrdinalSuffix";
 export { default as verifyIranianNationalId } from "./modules/nationalId/verifyIranianNationalId";
+export { default as getPlaceByIranNationalId } from "./modules/nationalId/getPlaceByIranNationalId";
