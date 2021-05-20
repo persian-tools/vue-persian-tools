@@ -161,6 +161,23 @@ every component accept a `tag` prop. you can use it to customize component html 
 | text           | string             |
 
 
+---
+
+### `removeOrdinalSuffix`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| number `required`  | string          | `remove Ordinal suffix from given numbers.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| text           | string             |
+
+
 ### Todos
 
 **`modules`**
@@ -179,7 +196,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] nationalId
 - [ ] numberToWords
 - [ ] phoneNumber
-- [ ] removeOrdinalSuffix
+- [x] removeOrdinalSuffix
 - [x] sheba
 - [ ] sortText
 - [x] toPersianChars
