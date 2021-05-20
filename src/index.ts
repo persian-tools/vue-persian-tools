@@ -12,3 +12,8 @@ export default install;
 // export components
 export { default as isPersian } from "./modules/isPersian";
 export { default as URLfix } from "./modules/URLfix";
+export { default as addOrdinalSuffix } from "./modules/addOrdinalSuffix";
+export { default as halfSpace } from "./modules/halfSpace";
+export { default as hasPersian } from "./modules/hasPersian";
+export { default as sheba } from "./modules/sheba";
+export { default as toPersianChars } from "./modules/toPersianChars";
