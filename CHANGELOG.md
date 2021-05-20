@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.7.1...v0.8.0) (2021-05-20)
+
+
+### Features
+
+* add removeOrdinalSuffix module ([3f0504d](https://github.com/persian-tools/vue-persian-tools/commit/3f0504dd0e70449909c5cb563fd78ae4c4b1b3bf))
+* **isPersian:** add isComplex prop ([ad5e219](https://github.com/persian-tools/vue-persian-tools/commit/ad5e219cfbd3d196684ecfe66bb7a335ee098571))
+
 ### [0.7.1](https://github.com/persian-tools/vue-persian-tools/compare/v0.7.0...v0.7.1) (2021-05-20)
 
 
