@@ -11,15 +11,16 @@ const Template = (args: any) => ({
     setup() {
         const regex = generateRegex(args.pattern);
         return {
-            text: args.val,
-            trim: regex
+            text: args.val.replace(/\s/g, ""),
+            trim: regex,
+            complex: args.complex
         };
     },
-    template: '<is-persian :str="text" :trimPattern="trim" v-slot="{isPersian}">is given text persian: <b>{{ isPersian }}</b></is-persian>'
+    template: '<is-persian :str="text" :isComplex="complex" :trimPattern="trim" v-slot="{isPersian}">is given text persian: <b>{{ isPersian }}</b></is-persian>'
 });
 
 export const Default = Template.bind({});
-Default.args = { val: "این یک متن فارسی است", pattern: `/["'-+()؟\s.]/g` };
+Default.args = { val: "این یک متن فارسی است", pattern: `/["'-+()؟\s.]/g`, complex: false };
 
 export default {
     title: "Modules/isPersian",
@@ -50,6 +51,20 @@ export default {
             },
             control: {
                 type: "text"
+            }
+        },
+
+        complex: {
+            name: "isComplex",
+            type: { name: "string", required: false },
+            defaultValue: false,
+            description: "accepts some of regular arabic characters which are commons in persian texts.",
+            table: {
+                type: { summary: "boolean" },
+                defaultValue: { summary: "false" }
+            },
+            control: {
+                type: "boolean"
             }
         }
     }

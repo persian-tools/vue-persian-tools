@@ -16,6 +16,12 @@ describe("isPersian", () => {
             }
         });
         expect(wrapper.html()).toMatch("true");
+
+        await wrapper.setProps({
+            txt: "این یک متن فارسی است"
+        });
+
+        expect(wrapper.html()).toMatch("true");
     });
 
     it("should return false if is given text is not Persian", async () => {

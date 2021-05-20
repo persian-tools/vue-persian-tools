@@ -14,11 +14,12 @@ export default defineComponent({
         trimPattern: {
             type: RegExp,
             default: /["'-+()؟\s.]/g
-        }
+        },
+        isComplex: Boolean
     },
     computed: {
         isFa(): boolean {
-            return isPersian(this.str!, this.trimPattern);
+            return isPersian(this.str!, this.isComplex, this.trimPattern);
         }
     },
 

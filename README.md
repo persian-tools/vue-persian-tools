@@ -49,6 +49,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 | -------------   |:-------------   | :---------------------------------------------| :-----------  |
 | text `required` | string          | `Text to be evaluated.`                       |  null         |       
 | trimPattern     | RegExp          | `characters which you want to trim from the string.` |  `/["'-+()؟\s.]/g`         | 
+| isComplex       | boolean         | `accepts some of regular arabic characters which are commons in persian texts.` |  false         | 
 
 **slots**
 
