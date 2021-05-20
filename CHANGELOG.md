@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/persian-tools/vue-persian-tools/compare/v0.7.0...v0.7.1) (2021-05-20)
+
+
+### Bug Fixes
+
+* export missing modules ([19eb4df](https://github.com/persian-tools/vue-persian-tools/commit/19eb4df90a68ac0effcc9d95f022af85bd802e82))
+
 ## 0.7.0 (2021-05-18)
 
 
