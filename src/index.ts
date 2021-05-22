@@ -1,13 +1,16 @@
-import { Plugin } from "@vue/runtime-core";
+import { Plugin } from "vue-demi";
+
 import * as components from "./modules/index";
 
-const install: Plugin = Vue => {
-    Object.values(components).forEach(cmp => {
-        Vue.component(cmp.name, cmp);
-    });
+const plugin: Plugin = {
+    install(Vue) {
+        Object.values(components).forEach(cmp => {
+            Vue.component(cmp.name, cmp);
+        });
+    }
 };
 
-export default install;
+export default plugin;
 
 // export components
 export { default as isPersian } from "./modules/isPersian";
