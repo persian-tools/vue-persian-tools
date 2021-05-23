@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.9.0...v0.10.0) (2021-05-23)
+
+
+### Features
+
+* add getBankNameFromCardNumber module ([f6bd9b4](https://github.com/persian-tools/vue-persian-tools/commit/f6bd9b4b79b6b211530695e21d81ee97f9b78109))
+* add verifyCardNumber module ([dd0baef](https://github.com/persian-tools/vue-persian-tools/commit/dd0baef6cb81974a1be25af103205b86913d954e))
+
 ## [0.9.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.8.0...v0.9.0) (2021-05-20)
 
 
