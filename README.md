@@ -214,6 +214,41 @@ every component accept a `tag` prop. you can use it to customize component html 
 | codes           | string[] | number[]             |
 
 
+---
+
+### `getBankNameFromCardNumber`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| digits `required`  | string \| number        | `bank card number.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| bankName       | string         |
+
+
+---
+
+### `verifyCardNumber`
+
+**props**
+
+| name            | type            |  description                                  | default value |
+| -------------   |:-------------   | :---------------------------------------------| :-----------  |
+| digits `required`  |  number        | `bank card number.`     |  null         |        
+
+**slots**
+
+| scope          | return type        | 
+| -------------  |:-----------------  |
+| isValid       | boolean         |
+
+
+
 ### Todos
 
 **`modules`**
@@ -226,17 +261,15 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [ ] commas
 - [ ] digits
 - [ ] extractCardNumbers
-- [ ] getBankNameFromCardNumber
-- [ ] getPlaceByIranNationalId
+- [x] getBankNameFromCardNumber
 - [x] halfSpace
 - [x] nationalId
 - [ ] numberToWords
 - [ ] phoneNumber
 - [x] removeOrdinalSuffix
 - [x] sheba
-- [ ] sortText
 - [x] toPersianChars
-- [ ] verifyCardNumber
+- [x] verifyCardNumber
 - [ ] wordsToNumber
 - [ ] isArabic
 
