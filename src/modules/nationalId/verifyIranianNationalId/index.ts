@@ -9,7 +9,7 @@ export default defineComponent({
     props: {
         nationalId: {
             type: [String, Number],
-            requied: true
+            required: true
         }
     },
     computed: {

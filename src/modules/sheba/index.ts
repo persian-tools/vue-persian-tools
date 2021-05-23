@@ -10,7 +10,7 @@ export default defineComponent({
     props: {
         shebaCode: {
             type: String,
-            requied: true
+            required: true
         }
     },
     computed: {

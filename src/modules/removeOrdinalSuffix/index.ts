@@ -9,7 +9,7 @@ export default defineComponent({
     props: {
         number: {
             type: String,
-            requied: true
+            required: true
         }
     },
     computed: {
