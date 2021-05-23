@@ -9,5 +9,6 @@ import removeOrdinalSuffix from "./removeOrdinalSuffix/index";
 import verifyIranianNationalId from "./nationalId/verifyIranianNationalId/index";
 import getPlaceByIranNationalId from "./nationalId/getPlaceByIranNationalId/index";
 import verifyCardNumber from "./bank/verifyCardNumber/index";
+import getBankNameFromCardNumber from "./bank/getBankNameFromCardNumber/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber };

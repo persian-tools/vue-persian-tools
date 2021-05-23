@@ -24,3 +24,4 @@ export { default as removeOrdinalSuffix } from "./modules/removeOrdinalSuffix";
 export { default as verifyIranianNationalId } from "./modules/nationalId/verifyIranianNationalId";
 export { default as getPlaceByIranNationalId } from "./modules/nationalId/getPlaceByIranNationalId";
 export { default as verifyCardNumber } from "./modules/bank/verifyCardNumber";
+export { default as getBankNameFromCardNumber } from "./modules/bank/getBankNameFromCardNumber";
