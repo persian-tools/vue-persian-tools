@@ -8,5 +8,5 @@ export interface IPersianToolsVuePluginOptions {
     directives: boolean;
 }
 
-declare const tools: VueConstructor<Vue> & { install: PluginFunction<IPluginOptions> };
+declare const tools: VueConstructor<Vue> & { install: PluginFunction<IPersianToolsVuePluginOptions> };
 export default tools;
