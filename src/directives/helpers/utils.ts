@@ -8,7 +8,9 @@ interface Vue2Directive<T = HTMLInputElement> {
     unbind?: (el: T, binding: Vue2DirectiveBinding) => void;
 }
 
-interface Directive<T = HTMLInputElement> extends Vue2Directive<T>, Vue3Directive {}
+interface Directive<T = HTMLInputElement> extends Vue2Directive<T>, Vue3Directive {
+    name: string;
+}
 type DirectiveBinding = Vue2DirectiveBinding | Vue3DirectiveBinding;
 
 export { Vue2DirectiveBinding, Vue2Directive, Vue3DirectiveBinding, Vue3Directive, Directive, DirectiveBinding };

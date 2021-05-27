@@ -3,7 +3,7 @@ import { Directive, DirectiveBinding } from "./utils";
 
 type Function = (str: string) => string | undefined;
 
-export default (func: Function) => {
+export default (func: Function, name: string) => {
     const setElementText = (el: HTMLInputElement) => {
         if (el.value) {
             el.value = func(el.value) as string;
@@ -37,12 +37,14 @@ export default (func: Function) => {
     if (isVue3) {
         directive = {
             mounted,
-            unmounted
+            unmounted,
+            name
         };
     } else {
         directive = {
             bind: mounted,
-            unbind: unmounted
+            unbind: unmounted,
+            name
         };
     }
 
