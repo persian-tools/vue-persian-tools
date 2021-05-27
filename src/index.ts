@@ -1,12 +1,32 @@
 import { Plugin } from "vue-demi";
 
 import * as components from "./modules/index";
+import * as directives from "./directives/index";
+
+import { IPersianToolsVuePluginOptions } from "./types";
 
 const plugin: Plugin = {
-    install(Vue) {
-        Object.values(components).forEach(cmp => {
-            Vue.component(cmp.name, cmp);
-        });
+    install(Vue, options: IPersianToolsVuePluginOptions) {
+        const _defaultOptions: IPersianToolsVuePluginOptions = {
+            components: true,
+            directives: false
+        };
+
+        const opts = { ..._defaultOptions, ...options };
+
+        if (opts.components) {
+            // install components
+            Object.values(components).forEach(cmp => {
+                Vue.component(cmp.name, cmp);
+            });
+        }
+
+        if (opts.directives) {
+            // install directives
+            Object.values(directives).forEach(directive => {
+                Vue.directive(directive.name as string, directive);
+            });
+        }
     }
 };
 
@@ -25,3 +45,7 @@ export { default as verifyIranianNationalId } from "./modules/nationalId/verifyI
 export { default as getPlaceByIranNationalId } from "./modules/nationalId/getPlaceByIranNationalId";
 export { default as verifyCardNumber } from "./modules/bank/verifyCardNumber";
 export { default as getBankNameFromCardNumber } from "./modules/bank/getBankNameFromCardNumber";
+
+// export directives
+export { default as URLfixDirective } from "./directives/urlFix";
+export { default as halfSpaceDirective } from "./directives/halfSpace";
