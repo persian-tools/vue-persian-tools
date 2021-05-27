@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.10.0...v0.11.0) (2021-05-27)
+
+
+### Features
+
+* add plugin options ([d3c0d90](https://github.com/persian-tools/vue-persian-tools/commit/d3c0d9005d1570a3c038cecd9e64cf5f537fc1db))
+* add urlFix directive ([57cfec4](https://github.com/persian-tools/vue-persian-tools/commit/57cfec4efee0ade562478351ee6ff6d96069c330))
+* export URLfix & halfSpace directives ([82d398e](https://github.com/persian-tools/vue-persian-tools/commit/82d398e3c181e89dbac31ca2068f0b05dd87cb06))
+
 ## [0.10.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.9.0...v0.10.0) (2021-05-23)
 
 
