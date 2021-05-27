@@ -1,7 +1,7 @@
-import halfSpace from "../src/directives/halfSpace/index";
+import halfSpace from "../../src/directives/halfSpace/index";
 
 const Template = (args: any) => ({
-    directives: { halfSpace },
+    directives: { halfSpace: halfSpace },
     setup() {
         return {
             text: args.val

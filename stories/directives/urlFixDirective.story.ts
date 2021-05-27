@@ -1,7 +1,6 @@
-import urlFix from "../src/directives/urlFix/index";
-
+import urlFix from "../../src/directives/urlFix/index";
 const Template = (args: any) => ({
-    directives: { urlFix },
+    directives: { urlFix: urlFix },
     setup() {
         return {
             text: args.val
