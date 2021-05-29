@@ -264,13 +264,13 @@ every component accept a `tag` prop. you can use it to customize component html 
 - [x] getBankNameFromCardNumber
 - [x] halfSpace
 - [x] nationalId
-- [ ] numberToWords
+- [x] numberToWords
 - [ ] phoneNumber
 - [x] removeOrdinalSuffix
 - [x] sheba
 - [x] toPersianChars
 - [x] verifyCardNumber
-- [ ] wordsToNumber
+- [x] wordsToNumber
 - [ ] isArabic
 
 
