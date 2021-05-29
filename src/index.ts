@@ -46,6 +46,7 @@ export { default as getPlaceByIranNationalId } from "./modules/nationalId/getPla
 export { default as verifyCardNumber } from "./modules/bank/verifyCardNumber";
 export { default as getBankNameFromCardNumber } from "./modules/bank/getBankNameFromCardNumber";
 export { default as numberToWords } from "./modules/numberToWords";
+export { default as wordsToNumber } from "./modules/wordsToNumber";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
