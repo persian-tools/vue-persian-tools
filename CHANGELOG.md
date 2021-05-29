@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.11.0...v0.12.0) (2021-05-29)
+
+
+### Features
+
+* add numberToWords module ([db1cf88](https://github.com/persian-tools/vue-persian-tools/commit/db1cf8855f1aa183551739a343308a3af27ed095))
+* add wordsToNumber module ([2e17986](https://github.com/persian-tools/vue-persian-tools/commit/2e17986c1ec8e2b56d3fad4df33d366e75b69d46))
+
+
+### Bug Fixes
+
+* rename options interface to IPersianToolsVuePluginOptions ([1ce0125](https://github.com/persian-tools/vue-persian-tools/commit/1ce01252a03d7d48cb10c1fcce2dc48b74395aff))
+
 ## [0.11.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.10.0...v0.11.0) (2021-05-27)
 
 
