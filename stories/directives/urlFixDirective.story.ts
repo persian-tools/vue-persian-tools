@@ -25,7 +25,7 @@ export default {
             name: "str",
             type: { name: "string", required: true },
             defaultValue: null,
-            description: "Replace spaces for given text with urlFix.",
+            description: "url that need to be fixed",
             table: {
                 type: { summary: "string" },
                 defaultValue: { summary: "null" }
