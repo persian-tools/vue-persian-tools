@@ -24,7 +24,7 @@ export default {
             name: "str",
             type: { name: "string", required: true },
             defaultValue: null,
-            description: "Add Ordinal suffix to numbers.",
+            description: "Remove Ordinal suffix to numbers.",
             table: {
                 type: { summary: "string" },
                 defaultValue: { summary: "null" }
