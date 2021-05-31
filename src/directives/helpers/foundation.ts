@@ -3,7 +3,7 @@ import { Directive, DirectiveBinding } from "./utils";
 
 type Function = (str: string) => string | undefined;
 
-export default (func: Function, name: string) => {
+export default (func: Function, name: string, sync = true): Directive => {
     const setElementText = (el: HTMLInputElement) => {
         if (el.value) {
             el.value = func(el.value) as string;
@@ -22,31 +22,15 @@ export default (func: Function, name: string) => {
 
     function mounted(el: HTMLInputElement, binding: DirectiveBinding) {
         setElementText(el);
-        if (binding.modifiers.sync) {
+        if (sync && binding.modifiers.sync) {
             el.addEventListener("input", inputEvent);
         }
     }
     function unmounted(el: HTMLInputElement, binding: DirectiveBinding) {
-        if (binding.modifiers.sync) {
+        if (sync && binding.modifiers.sync) {
             el.removeEventListener("input", inputEvent);
         }
     }
 
-    let directive: Directive;
-
-    if (isVue3) {
-        directive = {
-            mounted,
-            unmounted,
-            name
-        };
-    } else {
-        directive = {
-            bind: mounted,
-            unbind: unmounted,
-            name
-        };
-    }
-
-    return directive;
+    return isVue3 ? { mounted, unmounted, name } : { bind: mounted, unbind: unmounted, name };
 };
