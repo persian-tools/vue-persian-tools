@@ -8,8 +8,7 @@ type Custom = {
 };
 
 export default (func: Function, name: string, sync = true, custom: Custom = {}): Directive => {
-    const params: any[] = [];
-
+    let params: any[];
     const setElementText = (el: HTMLInputElement) => {
         if (el.value) {
             el.value = func(el.value, ...params) as string;
@@ -27,6 +26,7 @@ export default (func: Function, name: string, sync = true, custom: Custom = {}):
     };
 
     function mounted(el: HTMLInputElement, binding: DirectiveBinding) {
+        params = [];
         if (custom.before) custom.before(params, binding);
         setElementText(el);
         if (custom.after) custom.after(params, binding);
