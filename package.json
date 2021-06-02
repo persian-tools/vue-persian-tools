@@ -94,6 +94,7 @@
         "lint-staged": "^9.5.0",
         "prettier": "^1.19.1",
         "rollup": "^2.40.0",
+        "rollup-plugin-generate-declarations": "^1.1.1",
         "rollup-plugin-terser": "^7.0.2",
         "standard-version": "^9.1.1",
         "typescript": "~3.9.3",

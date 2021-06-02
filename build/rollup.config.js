@@ -6,6 +6,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import pkg from "../package.json";
 import replace from "@rollup/plugin-replace";
+import generateDeclarations from 'rollup-plugin-generate-declarations';
 
 
 const banner = `/*!
@@ -84,6 +85,8 @@ function createEntry(config) {
     };
 
     c.external.push(/@babel\/runtime/);
+
+    c.plugins.push(generateDeclarations())
 
     c.plugins.push(replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
