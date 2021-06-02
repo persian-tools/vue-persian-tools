@@ -1,4 +1,4 @@
-export * from "../directives/helpers/utils";
+export * from "../../src/directives/helpers/utils";
 
 // for vue 2 plugins
 import Vue, { PluginFunction, VueConstructor } from "vue";
