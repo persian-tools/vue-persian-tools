@@ -16,5 +16,6 @@ import isArabic from "./isArabic/index";
 import extractCardNumber from "./extractCardNumber/index";
 import addCommas from "./commas/add/index";
 import removeCommas from "./commas/remove/index";
+import digits from "./digits/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber, isArabic, extractCardNumber, addCommas, removeCommas };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber, isArabic, extractCardNumber, addCommas, removeCommas, digits };
