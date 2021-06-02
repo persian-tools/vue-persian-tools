@@ -3,7 +3,6 @@
 		<img src="https://github.com/persian-tools/react-persian-tools/raw/master/images/logo.png" width="200">
 	</p>
   <h1 align="center">Vue persian tools</h1>
-  <h2 align="center">[Work In Progress]</h2>
   <p align="center">Persian tools wrapper for vue.js</p>
 	
 ![CI/CD](https://github.com/persian-tools/vue-persian-tools/actions/workflows/storybook.yml/badge.svg)
@@ -14,273 +13,467 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools/badge)](https://www.codefactor.io/repository/github/persian-tools/vue-persian-tools)
 </div>
 
-
-- - -
-
-### Development
-
-running tests
-
-```
-yarn test
-```
-
-development
-
-```
-yarn storybook
-```
-
 ---
+
+### [See demo](https://persian-tools.github.io/vue-persian-tools)
+### [Persian tools repo](https://github.com/persian-tools/persian-tools)
+
 <br />
 
+---
+
+
+<br />
+
+### Installation
+
+npm
+
+```bash
+npm i @persian-tools/vue-persian-tools
+```
+
+**⚠️ If you are using vue2 you need to install composition api alongside the main package**
+
+```bash
+npm i @vue/composition-api
+```
+
+
+### Usage
+
+```js
+// in vue 2
+import Vue from 'vue'
+import tools from "@persian-tools/vue-persian-tools";
+
+Vue.use(tools, {
+    components: true,
+    directives: true
+});
+
+// in vue 3
+import tools from "@persian-tools/vue-persian-tools";
+createApp(App).use(tools, options);
+```
+
+this way, you can install directives & components globally.
+by default only components will install globally. by passing `directives: true` to plugin options you can also enable directives
+```js
+{
+    components: false, // it wont install components
+    directives: true, // install directives globally
+}
+```
+
+Or import directives or components locally
+```js
+import { toPersianDirective,  halfSpace} from "@persian-tools/vue-persian-tools";
+
+export default {
+    // install locally
+    directives: { toPersianDirective },
+    components: { halfSpace }
+}
+```
+
+
+
+<br />
+
+---
+
+<br />
+
+## components
+
 ### `tag prop`
+
 every component accept a `tag` prop. you can use it to customize component html tag. default is `span`
+
 ```js
 <is-persian tag="div"></is-persian>
 ```
 
-
-### `isPersian`
-
-**props**
-
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| text `required` | string          | `Text to be evaluated.`                       |  null         |       
-| trimPattern     | RegExp          | `characters which you want to trim from the string.` |  `/["'-+()؟\s.]/g`         | 
-| isComplex       | boolean         | `accepts some of regular arabic characters which are commons in persian texts.` |  false         | 
-
-**slots**
-
-| scope          | return type     | 
-| -------------  |:-------------  |
-| isPersian      | boolean         |      
-
+<br />
 
 ---
 
-### `URLfix`
+### `isPersian` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-ispersian--default)
 
-**props**
+**slots**:
+<br />
+`isPersian`: boolean
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| url `required` | string           | `url that need to be fixed`                   |  null         |        
+```html
+<is-persian :str="text" :isComplex="complex" :trimPattern="trim" v-slot="{isPersian}">{{ isPersian }}</is-persian>
+```
 
-**slots**
-
-| scope          | return type     | 
-| -------------  |:-------------  |
-| url            | string         |   
-
+<br />
 
 ---
 
-### `hasPersian`
+### `URLfix` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-urlfix--default)
 
-**props**
+**slots**:
+<br />
+`url`: string
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| str `required` | string           | `Check if string includes persian alphabet.`  |  null         |        
+```html
+<URLfix :url="your url" v-slot="{ url }">fixed URL: <b>{{ url }}</b></URLfix>
+```
 
-**slots**
-
-| scope          | return type     | 
-| -------------  |:-------------  |
-| hasPersian     | boolean         |   
-
+<br />
 
 ---
 
-### `toPersianChars`
+### `Sheba` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-sheba--default)
 
-**props**
+**slots**:
+<br />
+`isValid`: boolean
+<br />
+`info`: ShebaResult
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| str `required` | string           | `Convert given text to persian.`  |  null         |        
+```html
+<Sheba :shebaCode="code" v-slot="{ isValid, info }">
+    is sheba valid: {{ isValid }}
 
-**slots**
+    <h3>info about sheba</h3>
+    <p>nickname: {{ info.nickname }}</p>
+    <p>name: {{ info.name }}</p>
+    <p>persianName: {{ info.persianName }}</p>
+    <p>code: {{ info.code }}</p>
+    <p>accountNumberAvailable: {{ info.accountNumberAvailable }}</p>
+</Sheba>
+```
 
-| scope          | return type     | 
-| -------------  |:-------------  |
-| text           | string         |   
-
-
----
-
-### `Sheba`
-
-**props**
-
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| shebaCode `required` | string     | `Your sheba code.`  |  null         |        
-
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| isValid        | boolean            |
-| info           | ShebaResult \| null |
-
+<br />
 
 ---
 
-### `halfSpace`
+### `addOrdinalSuffix` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-addordinalsuffix--default)
 
-**props**
+**slots**:
+<br />
+`text`: string
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| str `required`  | string          | `Replace spaces for given text with halfspace..` |  null         |        
+```html
+<addOrdinalSuffix :number="text" v-slot="{ text }">{{ text }}</addOrdinalSuffix>
+```
 
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| text           | string             |
-
+<br />
 
 ---
 
-### `addOrdinalSuffix`
+### `bill` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-bill--default)
 
-**props**
+**slots**:
+<br />
+`result`: billResult
+<br />
+`amount`: number
+<br />
+`type`: billType
+<br />
+`isBillValid`: boolean
+<br />
+`isBillIdValid`: boolean
+<br />
+`isBillPaymentValid`: boolean
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| number `required`  | string          | `Add Ordinal suffix to given numbers.`     |  null         |        
+```html
+<bill :bill="val" v-slot="{ result, amount, type, isBillValid, isBillIdValid, isBillPaymentValid }">
+    <p>result of bill:{{ result }}</p>
+    <p>amount:{{ amount }}</p>
+    <p>bill type:{{ type }}</p>
+    <p>is bill valid:{{ isBillValid }}</p>
+    <p>is bill id valid:{{ isBillIdValid }}</p>
+    <p>is bill payment id valid:{{ isBillPaymentValid }}</p>
+</bill>
+```
 
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| text           | string             |
-
-
----
-
-### `removeOrdinalSuffix`
-
-**props**
-
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| number `required`  | string          | `remove Ordinal suffix from given numbers.`     |  null         |        
-
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| text           | string             |
-
+<br />
 
 ---
 
-### `verifyIranianNationalId`
+### `commas` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-commas--default)
 
-**props**
+**slots**:
+<br />
+`number`: number | string
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| nationalId `required`  | string - number        | `national id for validation.`     |  null         |        
+```html
+<div>
+    <addCommas :number="your number..." v-slot="{ number }"> {{ number }}</addCommas>
+    <removeCommas :number="your number..." v-slot="{ number }">{{ number }}</removeCommas>
+</div>
+```
 
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| isValid           | boolean             |
-
-
----
-
-### `getPlaceByIranNationalId`
-
-**props**
-
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| nationalId `required`  | string        | `user national id.`     |  null         |        
-
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| city           | string             |
-| province           | string             |
-| codes           | string[] | number[]             |
-
+<br />
 
 ---
 
-### `getBankNameFromCardNumber`
+### `digits` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-digits--default)
 
-**props**
+**slots**:
+<br />
+`value`: string
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| digits `required`  | string \| number        | `bank card number.`     |  null         |        
+```html
+<digits :number="input number..." :convert="language to convert..." v-slot="{ value }">converted to: {{ value }}</digits>
+```
 
-**slots**
-
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| bankName       | string         |
-
+<br />
 
 ---
 
-### `verifyCardNumber`
+### `extractCardNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-extractcardnumber--default)
 
-**props**
+**slots**:
+<br />
+`cards`: ExtractCardNumber[]
+<br />
+`valid`: ExtractCardNumber[]
 
-| name            | type            |  description                                  | default value |
-| -------------   |:-------------   | :---------------------------------------------| :-----------  |
-| digits `required`  |  number        | `bank card number.`     |  null         |        
+```html
+<extractCardNumber :str="val" v-slot="{ cards, valid }">
+    <ul>
+        <h4>all extracted cards:</h4>
+        <li v-for="(card, i) in cards" :key="i">
+            <p>index: {{ card.index }}</p>
+            <p>pure: {{ card.pure }}</p>
+            <p>base: {{ card.base }}</p>
+            <p>isValid: {{ card.isValid }}</p>
+        </li>
+        <li v-for="(card, i) in valid" :key="i">
+            <p>index: {{ card.index }}</p>
+            <p>pure: {{ card.pure }}</p>
+            <p>base: {{ card.base }}</p>
+            <p>isValid: {{ card.isValid }}</p>
+        </li>
+    </ul>
+</extractCardNumber>
+```
 
-**slots**
+<br />
 
-| scope          | return type        | 
-| -------------  |:-----------------  |
-| isValid       | boolean         |
+---
 
+### `getBankNameFromCardNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-getbanknamefromcardnumber--default)
 
+**slots**:
+<br />
+`bankName`: string
 
-### Todos
+```html
+<getBankNameFromCardNumber :digits="card_number..." v-slot="{ bankName }"> {{ bankName }}</getBankNameFromCardNumber>
+```
 
-**`modules`**
+<br />
 
-- [x] isPersian
-- [x] URLfix
-- [x] hasPersian
-- [x] addOrdinalSuffix
-- [ ] bill
-- [ ] commas
-- [ ] digits
-- [ ] extractCardNumbers
-- [x] getBankNameFromCardNumber
-- [x] halfSpace
-- [x] nationalId
-- [x] numberToWords
-- [ ] phoneNumber
-- [x] removeOrdinalSuffix
-- [x] sheba
-- [x] toPersianChars
-- [x] verifyCardNumber
-- [x] wordsToNumber
-- [ ] isArabic
+---
 
+### `getPlaceByIranNationalId` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-getplacebyirannationalid--default)
+
+**slots**:
+<br />
+`city`: string
+<br />
+`codes`: string[]
+<br />
+`province`: string
+
+```html
+<getPlaceByIranNationalId :nationalId="id..." v-slot="{ city, codes, province }">
+    city: <b> {{ city }} </b> <br />
+    province: <b> {{ province}} </b> codes: <b> {{ codes }} </b>
+</getPlaceByIranNationalId>
+```
+
+<br />
+
+---
+
+### `halfSpace` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-halfspace--default)
+
+**slots**:
+<br />
+`text`: string
+
+```html
+<halfSpace :str="text" v-slot="{ text }">{{ text }}</halfSpace>
+```
+
+<br />
+
+---
+
+### `hasPersian` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-haspersian--default)
+
+**slots**:
+<br />
+`hasPersian`: boolean
+
+```html
+<hasPersian :str="text" v-slot="{ hasPersian }">{{ hasPersian }}</hasPersian>
+```
+
+<br />
+
+---
+
+### `isArabic` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-isarabic--default)
+
+**slots**:
+<br />
+`isArabic`: boolean
+
+```html
+<isArabic :str="text" :trimPattern="trim" v-slot="{ isArabic }">{{ isArabic }}</isArabic>
+```
+
+<br />
+
+---
+
+### `numberToWords` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-numbertowords--default)
+
+**slots**:
+<br />
+`words`: string
+
+```html
+<numberToWords :number="val" v-slot="{ words }">{{ words }}</numberToWords>
+```
+<br />
+
+---
+
+### `phoneNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-phonenumber--default)
+
+**slots**:
+<br />
+`details`: OperatorModel | null
+<br />
+`isValid`: boolean
+
+```html
+<phoneNumber :number="val" v-slot="{ details, isValid }">
+    <p>details: {{ details }}</p>
+    <p>is phone number valid: {{ isValid }}</p>
+</phoneNumber>
+```
+<br />
+
+---
+
+### `removeOrdinalSuffix` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-removeordinalsuffix--default)
+
+**slots**:
+<br />
+`text`: string
+
+```html
+<removeOrdinalSuffix :number="text" v-slot="{ text }"><b>{{ text }}</b></removeOrdinalSuffix>
+```
+<br />
+
+---
+
+### `toPersianChars` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-topersianchars--default)
+
+**slots**:
+<br />
+`text`: string
+
+```html
+<toPersianChars :str="val" v-slot="{ text }">{{ text }}</toPersianChars>
+```
+<br />
+
+---
+
+### `verifyCardNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-verifycardnumber--default)
+
+**slots**:
+<br />
+`isValid`: boolean
+
+```html
+<verifyCardNumber :digits="text" v-slot="{ isValid }">{{ isValid }}</verifyCardNumber>
+```
+<br />
+
+---
+
+### `verifyIranianNationalId` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-verifyiraniannationalid--default)
+
+**slots**:
+<br />
+`isValid`: boolean
+
+```html
+<verifyIranianNationalId :nationalId="text" v-slot="{ isValid }">{{ isValid }}</verifyIranianNationalId>
+```
+<br />
+
+---
+### `wordsToNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-wordstonumber--default)
+
+**slots**:
+<br />
+`number`: number
+
+```html
+<wordsToNumber :words="val..." fuzzy addCommas v-slot="{ number }">{{ number }}</wordsToNumber>
+```
+<br />
+
+---
+
+## directives
+all directives have sync modifiers. using this modifier will enable reactive data in your directive.
+
+### `halfSpace directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-halfspace--default)
+
+```html
+<span v-half-space>your text</span>
+<input :value="text" v-half-space.sync />
+```
+<br />
+
+---
+
+### `toPersian directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
+
+```html
+<span v-to-persian>...</span>
+<input :value="text" v-to-persian.sync />
+```
+<br />
+
+---
+
+### `urlFix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
+
+```html
+<span v-url-fix>...</span>
+<input :value="text" v-url-fix.sync />
+```
+
+<br />
+
+---
 
 ## Contributing
 
-Thank you for your interest in contributing! Please feel free to put up a PR for any issue or feature request.
+check [Contributing.md](https://github.com/persian-tools/vue-persian-tools/blob/master/.github/contributing.md) for more information
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/persian-tools/vue-persian-tools/blob/master/LICENSE) file for details.
 
 ## Changelogs
-- [changelog](https://github.com/persian-tools/vue-persian-tools/blob/master/CHANGELOG.md)
+
+-   [changelog](https://github.com/persian-tools/vue-persian-tools/blob/master/CHANGELOG.md)
