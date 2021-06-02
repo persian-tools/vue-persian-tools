@@ -3,7 +3,10 @@ import { Plugin } from "vue-demi";
 import * as components from "./modules/index";
 import * as directives from "./directives/index";
 
-import { IPersianToolsVuePluginOptions } from "./types";
+export interface IPersianToolsVuePluginOptions {
+    components: boolean;
+    directives: boolean;
+}
 
 const plugin: Plugin = {
     install(Vue, options: IPersianToolsVuePluginOptions) {
