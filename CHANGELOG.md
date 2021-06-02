@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.12.0...v0.13.0) (2021-06-02)
+
+
+### Features
+
+* add isArabic module ([b731b77](https://github.com/persian-tools/vue-persian-tools/commit/b731b77939ec5a8009fd9e164e03f1aede6ef505))
+* add toPersian directive ([593576a](https://github.com/persian-tools/vue-persian-tools/commit/593576a19845c1fcd3a0b14d0275958368db3a97))
+
 ## [0.12.0](https://github.com/persian-tools/vue-persian-tools/compare/v0.11.0...v0.12.0) (2021-05-29)
 
 
