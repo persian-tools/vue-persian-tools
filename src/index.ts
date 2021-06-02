@@ -49,6 +49,8 @@ export { default as numberToWords } from "./modules/numberToWords";
 export { default as wordsToNumber } from "./modules/wordsToNumber";
 export { default as isArabic } from "./modules/isArabic";
 export { default as extractCardNumber } from "./modules/extractCardNumber";
+export { default as addCommas } from "./modules/commas/add";
+export { default as removeCommas } from "./modules/commas/remove";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
