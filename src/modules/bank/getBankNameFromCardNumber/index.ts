@@ -4,7 +4,7 @@ import { getSlot } from "../../helpers/getSlot.skip";
 import tag from "../../helpers/tagPropMixin.skip";
 
 export default defineComponent({
-    name: "getBankNameFromCardNumber ",
+    name: "getBankNameFromCardNumber",
     mixins: [tag],
     props: {
         digits: {
