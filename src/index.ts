@@ -52,6 +52,7 @@ export { default as extractCardNumber } from "./modules/extractCardNumber";
 export { default as addCommas } from "./modules/commas/add";
 export { default as removeCommas } from "./modules/commas/remove";
 export { default as digits } from "./modules/digits";
+export { default as bill } from "./modules/Bill";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
