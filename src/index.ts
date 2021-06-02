@@ -53,6 +53,7 @@ export { default as addCommas } from "./modules/commas/add";
 export { default as removeCommas } from "./modules/commas/remove";
 export { default as digits } from "./modules/digits";
 export { default as bill } from "./modules/Bill";
+export { default as phoneNumber } from "./modules/phoneNumber";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
