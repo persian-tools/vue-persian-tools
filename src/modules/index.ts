@@ -12,5 +12,6 @@ import verifyCardNumber from "./bank/verifyCardNumber/index";
 import getBankNameFromCardNumber from "./bank/getBankNameFromCardNumber/index";
 import numberToWords from "./numberToWords/index";
 import wordsToNumber from "./wordsToNumber/index";
+import isArabic from "./isArabic/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber, isArabic };

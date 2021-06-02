@@ -47,6 +47,7 @@ export { default as verifyCardNumber } from "./modules/bank/verifyCardNumber";
 export { default as getBankNameFromCardNumber } from "./modules/bank/getBankNameFromCardNumber";
 export { default as numberToWords } from "./modules/numberToWords";
 export { default as wordsToNumber } from "./modules/wordsToNumber";
+export { default as isArabic } from "./modules/isArabic";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
