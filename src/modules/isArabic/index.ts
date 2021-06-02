@@ -13,7 +13,7 @@ export default defineComponent({
         },
         trimPattern: {
             type: RegExp,
-            default: /["'-+()؟\s.]/g
+            default: () => /["'-+()؟\s.]/g
         }
     },
     computed: {
