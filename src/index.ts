@@ -58,3 +58,4 @@ export { default as phoneNumber } from "./modules/phoneNumber";
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
 export { default as halfSpaceDirective } from "./directives/halfSpace";
+export { default as toPersianDirective } from "./directives/toPersian";
