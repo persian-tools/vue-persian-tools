@@ -1,25 +1,25 @@
 import { defineComponent, h } from "vue-demi";
-import { getBankNameFromCardNumber } from "@persian-tools/persian-tools";
+import { removeCommas } from "@persian-tools/persian-tools";
 import { getSlot } from "../../helpers/getSlot.skip";
 import tag from "../../helpers/tagPropMixin.skip";
 
 export default defineComponent({
-    name: "getBankNameFromCardNumber",
+    name: "removeCommas",
     mixins: [tag],
     props: {
-        digits: {
-            type: [String, Number],
+        number: {
+            type: String,
             required: true
         }
     },
     computed: {
-        getBankName(): string | undefined | null {
-            return getBankNameFromCardNumber(this.digits);
+        remove(): number | string {
+            return removeCommas(this.number);
         }
     },
 
     render() {
-        const __SLOTS__ = getSlot(this, { bankName: this.getBankName });
+        const __SLOTS__ = getSlot(this, { number: this.remove });
         return h(this.tag, __SLOTS__);
     }
 });

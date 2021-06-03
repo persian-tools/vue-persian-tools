@@ -5,13 +5,11 @@ const chalk = require("chalk");
 const execa = require("execa");
 const { gzipSync } = require("zlib");
 const { compress } = require("brotli");
-const copyTypes = require("./postInstall");
 
 const files = ["dist/persianTools.esm-browser.js", "dist/persianTools.esm-browser.prod.js", "dist/persianTools.esm-bundler.js", "dist/persianTools.global.js", "dist/persianTools.global.prod.js", "dist/persianTools.cjs.js"];
 
 async function run() {
     await build();
-    await copyTypes();
     checkAllSizes();
 }
 

@@ -12,5 +12,12 @@ import verifyCardNumber from "./bank/verifyCardNumber/index";
 import getBankNameFromCardNumber from "./bank/getBankNameFromCardNumber/index";
 import numberToWords from "./numberToWords/index";
 import wordsToNumber from "./wordsToNumber/index";
+import isArabic from "./isArabic/index";
+import extractCardNumber from "./extractCardNumber/index";
+import addCommas from "./commas/add/index";
+import removeCommas from "./commas/remove/index";
+import digits from "./digits/index";
+import bill from "./Bill/index";
+import phoneNumber from "./phoneNumber/index";
 
-export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber };
+export { isPersian, URLfix, addOrdinalSuffix, halfSpace, hasPersian, sheba, toPersianChars, removeOrdinalSuffix, verifyIranianNationalId, getPlaceByIranNationalId, verifyCardNumber, getBankNameFromCardNumber, numberToWords, wordsToNumber, isArabic, extractCardNumber, addCommas, removeCommas, digits, bill, phoneNumber };

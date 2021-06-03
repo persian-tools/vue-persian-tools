@@ -3,7 +3,10 @@ import { Plugin } from "vue-demi";
 import * as components from "./modules/index";
 import * as directives from "./directives/index";
 
-import { IPersianToolsVuePluginOptions } from "./types";
+export interface IPersianToolsVuePluginOptions {
+    components: boolean;
+    directives: boolean;
+}
 
 const plugin: Plugin = {
     install(Vue, options: IPersianToolsVuePluginOptions) {
@@ -47,7 +50,15 @@ export { default as verifyCardNumber } from "./modules/bank/verifyCardNumber";
 export { default as getBankNameFromCardNumber } from "./modules/bank/getBankNameFromCardNumber";
 export { default as numberToWords } from "./modules/numberToWords";
 export { default as wordsToNumber } from "./modules/wordsToNumber";
+export { default as isArabic } from "./modules/isArabic";
+export { default as extractCardNumber } from "./modules/extractCardNumber";
+export { default as addCommas } from "./modules/commas/add";
+export { default as removeCommas } from "./modules/commas/remove";
+export { default as digits } from "./modules/digits";
+export { default as bill } from "./modules/Bill";
+export { default as phoneNumber } from "./modules/phoneNumber";
 
 // export directives
 export { default as URLfixDirective } from "./directives/urlFix";
 export { default as halfSpaceDirective } from "./directives/halfSpace";
+export { default as toPersianDirective } from "./directives/toPersian";

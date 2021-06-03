@@ -4,6 +4,7 @@ module.exports = {
         "^.+\\.vue$": "vue-jest"
     },
     coverageDirectory: "coverage",
+    testPathIgnorePatterns: ["dist"],
     collectCoverageFrom: ["./src/modules/**/*.ts", "!src/modules/**/*.skip.ts", "!./src/modules/index.ts"],
     collectCoverage: true
 };
