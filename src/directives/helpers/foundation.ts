@@ -5,13 +5,10 @@ type Function = (str: string) => string | undefined;
 
 export default (func: Function, name: string) => {
     const setElementText = (el: HTMLInputElement | HTMLElement) => {
-        const _el: HTMLInputElement = el as HTMLInputElement;
-        if (_el.value) {
-            _el.value = func(_el.value) as string;
-        } else if (el.innerText) {
-            el.innerText = func(el.innerText) as string;
-        } else if (el.textContent) {
-            el.textContent = func(el.textContent) as string;
+        if ((el as HTMLInputElement).value) {
+            (el as HTMLInputElement).value = func((el as HTMLInputElement).value) as string;
+        } else {
+            el.textContent = func(el.textContent as string) as string;
         }
     };
     const inputEvent = (e: Event) => {
