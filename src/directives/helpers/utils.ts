@@ -1,6 +1,6 @@
 import { ObjectDirective as Vue3Directive, DirectiveBinding as Vue3DirectiveBinding } from "vue";
 
-type DirectiveFunction = (el: HTMLElement, binding: DirectiveBinding, ...nodes: any) => void;
+type DirectiveFunction = (el: HTMLInputElement | HTMLElement, binding: DirectiveBinding, ...nodes: any) => void;
 interface Vue2DirectiveBinding {
     modifiers: Record<string, boolean>;
 }

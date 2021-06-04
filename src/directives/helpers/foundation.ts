@@ -4,9 +4,10 @@ import { Directive, DirectiveBinding } from "./utils";
 type Function = (str: string) => string | undefined;
 
 export default (func: Function, name: string) => {
-    const setElementText = (el: HTMLInputElement) => {
-        if (el.value) {
-            el.value = func(el.value) as string;
+    const setElementText = (el: HTMLInputElement | HTMLElement) => {
+        const _el: HTMLInputElement = el as HTMLInputElement;
+        if (_el.value) {
+            _el.value = func(_el.value) as string;
         } else if (el.innerText) {
             el.innerText = func(el.innerText) as string;
         } else if (el.textContent) {
@@ -20,13 +21,13 @@ export default (func: Function, name: string) => {
         setElementText(target);
     };
 
-    function mounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    function mounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
         setElementText(el);
         if (binding.modifiers.sync) {
             el.addEventListener("input", inputEvent);
         }
     }
-    function unmounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    function unmounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
         if (binding.modifiers.sync) {
             el.removeEventListener("input", inputEvent);
         }
