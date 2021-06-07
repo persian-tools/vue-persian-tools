@@ -1,5 +1,5 @@
 {
-    "name": "vue-persian-tools",
+    "name": "@persian-tools/vue-persian-tools",
     "version": "0.13.0",
     "private": false,
     "description": "Persian tools wrapper for vue.js",
@@ -10,7 +10,7 @@
     "module": "dist/persianTools.esm-browser.prod.js",
     "unpkg": "dist/persianTools.global.prod.js",
     "jsdelivr": "dist/persianTools.global.prod.js",
-    "types": "./dist/types/index.d.ts",
+    "types": "./dist/index.d.ts",
     "files": [
         "src/*",
         "dist/*"

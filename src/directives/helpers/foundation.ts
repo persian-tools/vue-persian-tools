@@ -9,13 +9,11 @@ type Custom = {
 
 export default (func: Function, name: string, sync = true, custom: Custom = {}): Directive => {
     let params: any[];
-    const setElementText = (el: HTMLInputElement) => {
-        if (el.value) {
-            el.value = func(el.value, ...params) as string;
-        } else if (el.innerText) {
-            el.innerText = func(el.innerText, ...params) as string;
+    const setElementText = (el: HTMLInputElement | HTMLElement) => {
+        if ((el as HTMLInputElement).value) {
+            (el as HTMLInputElement).value = func((el as HTMLInputElement).value, ...params) as string;
         } else if (el.textContent) {
-            el.textContent = func(el.textContent, ...params) as string;
+            el.textContent = func(el.textContent, ...params) as string
         }
     };
     const inputEvent = (e: Event) => {
@@ -25,7 +23,7 @@ export default (func: Function, name: string, sync = true, custom: Custom = {}):
         setElementText(target);
     };
 
-    function mounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    function mounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
         params = [];
         if (custom.before) custom.before(params, binding);
         setElementText(el);
@@ -34,7 +32,7 @@ export default (func: Function, name: string, sync = true, custom: Custom = {}):
             el.addEventListener("input", inputEvent);
         }
     }
-    function unmounted(el: HTMLInputElement, binding: DirectiveBinding) {
+    function unmounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
         if (sync && binding.modifiers.sync) {
             el.removeEventListener("input", inputEvent);
         }
