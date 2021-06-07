@@ -27,7 +27,7 @@ const plugin: Plugin = {
         if (opts.directives) {
             // install directives
             Object.values(directives).forEach(directive => {
-                Vue.directive(directive.name as string, directive);
+                Vue.directive(directive.name, directive);
             });
         }
     }
@@ -62,3 +62,7 @@ export { default as phoneNumber } from "./modules/phoneNumber";
 export { default as URLfixDirective } from "./directives/urlFix";
 export { default as halfSpaceDirective } from "./directives/halfSpace";
 export { default as toPersianDirective } from "./directives/toPersian";
+export { default as addOrdinalSuffixDirective } from "./directives/addOrdinalSuffix";
+export { default as removeOrdinalSuffixDirective } from "./directives/removeOrdinalSuffix";
+export { default as numberToWordsDirective } from "./directives/numberToWords";
+export { default as wordsToNumberDirective } from "./directives/wordsToNumber";
