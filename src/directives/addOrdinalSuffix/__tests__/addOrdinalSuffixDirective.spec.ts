@@ -33,7 +33,7 @@ describe("addOrdinalSuffix", () => {
         },
         template: '<input v-add-ordinal-suffix.sync v-text="val" />'
     };
-    it("should not change in typing", async () => {
+    it("should change in typing", async () => {
         const num = `سی`;
 
         const wrapper = mount(cmpSync, { propsData: { val: num } });
@@ -42,6 +42,6 @@ describe("addOrdinalSuffix", () => {
 
         await input.setValue("صد");
 
-        expect(wrapper.find("input").element.value).toBe("صد");
+        expect(wrapper.find("input").element.value).toBe("صدم");
     });
 });

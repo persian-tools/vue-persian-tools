@@ -7,13 +7,13 @@ type Custom = {
     after?: (param: any[], binding: DirectiveBinding) => void;
 };
 
-export default (func: Function, name: string, sync = true, custom: Custom = {}): Directive => {
+export default (func: Function, name: string, custom: Custom = {}): Directive => {
     let params: any[];
     const setElementText = (el: HTMLInputElement | HTMLElement) => {
         if ((el as HTMLInputElement).value) {
             (el as HTMLInputElement).value = func((el as HTMLInputElement).value, ...params) as string;
         } else if (el.textContent) {
-            el.textContent = func(el.textContent, ...params) as string
+            el.textContent = func(el.textContent, ...params) as string;
         }
     };
     const inputEvent = (e: Event) => {
@@ -28,12 +28,12 @@ export default (func: Function, name: string, sync = true, custom: Custom = {}):
         if (custom.before) custom.before(params, binding);
         setElementText(el);
         if (custom.after) custom.after(params, binding);
-        if (sync && binding.modifiers.sync) {
+        if (binding.modifiers.sync) {
             el.addEventListener("input", inputEvent);
         }
     }
     function unmounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
-        if (sync && binding.modifiers.sync) {
+        if (binding.modifiers.sync) {
             el.removeEventListener("input", inputEvent);
         }
     }

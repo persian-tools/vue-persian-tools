@@ -33,7 +33,7 @@ describe("numberToWords", () => {
         },
         template: '<input v-number-to-words.sync v-text="val" />'
     };
-    it("should not change in typing", async () => {
+    it("should change in typing", async () => {
         const num = "500,443";
 
         const wrapper = mount(cmpSync, { propsData: { val: num } });
@@ -42,6 +42,6 @@ describe("numberToWords", () => {
 
         await input.setValue("100");
 
-        expect(wrapper.find("input").element.value).toBe("100");
+        expect(wrapper.find("input").element.value).toBe("صد");
     });
 });

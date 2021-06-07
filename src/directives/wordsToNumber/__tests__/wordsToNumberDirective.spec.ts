@@ -79,7 +79,7 @@ describe("wordsToNumber", () => {
         },
         template: '<input v-words-to-number.sync v-text="val" />'
     };
-    it("should not change in typing", async () => {
+    it("should change in typing", async () => {
         const num = "چهارصد پنجاه هزار";
 
         const wrapper = mount(cmpSync, { propsData: { val: num } });
@@ -88,6 +88,6 @@ describe("wordsToNumber", () => {
 
         await input.setValue("صد");
 
-        expect(wrapper.find("input").element.value).toBe("صد");
+        expect(wrapper.find("input").element.value).toBe("100");
     });
 });
