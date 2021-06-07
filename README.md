@@ -66,16 +66,16 @@ by default only components will install globally. by passing `directives: true` 
 }
 ```
 
-Also you can install some components or directives globally.
+You can also install components & directives globally by their names.
 
 ```js
 {
-    components: ['isPersian'],
+    components: ['isPersian', 'addOrdinalSuffix', '...'],
     directives: ['halfSpace'],
 }
 ```
 
-Or import directives or components locally
+Or import them locally
 
 ```js
 import { toPersianDirective, halfSpace } from "@persian-tools/vue-persian-tools";
