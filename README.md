@@ -472,7 +472,7 @@ all directives have sync modifiers. using this modifier will enable reactive dat
 
 ---
 
-### `urlFix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
+### `URLFix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
 
 ```html
 <span v-url-fix>...</span> <input :value="text" v-url-fix.sync />

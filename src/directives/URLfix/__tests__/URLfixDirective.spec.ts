@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import urlFix from "../index";
 
-describe("urlFix", () => {
+describe("URLfix", () => {
     const cmp = {
         props: ["val"],
         directives: {

@@ -1,4 +1,4 @@
-import urlFix from "../../src/directives/urlFix/index";
+import urlFix from "../../src/directives/URLfix/index";
 const Template = (args: any) => ({
     directives: { urlFix: urlFix },
     setup() {
@@ -19,7 +19,7 @@ export const Default = Template.bind({});
 Default.args = { val: "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%A7%D9%88%DB%8C%DA%A9%DB%8C:Gadget-Extra-Editbuttons-botworks.js" };
 
 export default {
-    title: "Directives/urlFix",
+    title: "Directives/URLfix",
     argTypes: {
         val: {
             name: "str",

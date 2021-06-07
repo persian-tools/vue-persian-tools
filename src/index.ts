@@ -69,7 +69,7 @@ export { default as bill } from "./modules/Bill";
 export { default as phoneNumber } from "./modules/phoneNumber";
 
 // export directives
-export { default as URLfixDirective } from "./directives/urlFix";
+export { default as URLfixDirective } from "./directives/URLfix";
 export { default as halfSpaceDirective } from "./directives/halfSpace";
 export { default as toPersianDirective } from "./directives/toPersian";
 export { default as addOrdinalSuffixDirective } from "./directives/addOrdinalSuffix";
