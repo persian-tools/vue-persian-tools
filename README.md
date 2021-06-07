@@ -16,12 +16,12 @@
 ---
 
 ### [See demo](https://persian-tools.github.io/vue-persian-tools)
+
 ### [Persian tools repo](https://github.com/persian-tools/persian-tools)
 
 <br />
 
 ---
-
 
 <br />
 
@@ -39,12 +39,11 @@ npm i @persian-tools/vue-persian-tools
 npm i @vue/composition-api
 ```
 
-
 ### Usage
 
 ```js
 // in vue 2
-import Vue from 'vue'
+import Vue from "vue";
 import tools from "@persian-tools/vue-persian-tools";
 
 Vue.use(tools, {
@@ -59,6 +58,7 @@ createApp(App).use(tools, options);
 
 this way, you can install directives & components globally.
 by default only components will install globally. by passing `directives: true` to plugin options you can also enable directives
+
 ```js
 {
     components: false, // it wont install components
@@ -67,17 +67,16 @@ by default only components will install globally. by passing `directives: true` 
 ```
 
 Or import directives or components locally
+
 ```js
-import { toPersianDirective,  halfSpace} from "@persian-tools/vue-persian-tools";
+import { toPersianDirective, halfSpace } from "@persian-tools/vue-persian-tools";
 
 export default {
     // install locally
     directives: { toPersianDirective },
     components: { halfSpace }
-}
+};
 ```
-
-
 
 <br />
 
@@ -346,6 +345,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <numberToWords :number="val" v-slot="{ words }">{{ words }}</numberToWords>
 ```
+
 <br />
 
 ---
@@ -364,6 +364,7 @@ every component accept a `tag` prop. you can use it to customize component html 
     <p>is phone number valid: {{ isValid }}</p>
 </phoneNumber>
 ```
+
 <br />
 
 ---
@@ -377,6 +378,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <removeOrdinalSuffix :number="text" v-slot="{ text }"><b>{{ text }}</b></removeOrdinalSuffix>
 ```
+
 <br />
 
 ---
@@ -390,6 +392,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <toPersianChars :str="val" v-slot="{ text }">{{ text }}</toPersianChars>
 ```
+
 <br />
 
 ---
@@ -403,6 +406,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <verifyCardNumber :digits="text" v-slot="{ isValid }">{{ isValid }}</verifyCardNumber>
 ```
+
 <br />
 
 ---
@@ -416,9 +420,11 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <verifyIranianNationalId :nationalId="text" v-slot="{ isValid }">{{ isValid }}</verifyIranianNationalId>
 ```
+
 <br />
 
 ---
+
 ### `wordsToNumber` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-wordstonumber--default)
 
 **slots**:
@@ -428,19 +434,21 @@ every component accept a `tag` prop. you can use it to customize component html 
 ```html
 <wordsToNumber :words="val..." fuzzy addCommas v-slot="{ number }">{{ number }}</wordsToNumber>
 ```
+
 <br />
 
 ---
 
 ## directives
+
 all directives have sync modifiers. using this modifier will enable reactive data in your directive.
 
 ### `halfSpace directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-halfspace--default)
 
 ```html
-<span v-half-space>your text</span>
-<input :value="text" v-half-space.sync />
+<span v-half-space>your text</span> <input :value="text" v-half-space.sync />
 ```
+
 <br />
 
 ---
@@ -448,9 +456,9 @@ all directives have sync modifiers. using this modifier will enable reactive dat
 ### `toPersian directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
 
 ```html
-<span v-to-persian>...</span>
-<input :value="text" v-to-persian.sync />
+<span v-to-persian>...</span> <input :value="text" v-to-persian.sync />
 ```
+
 <br />
 
 ---
@@ -458,8 +466,55 @@ all directives have sync modifiers. using this modifier will enable reactive dat
 ### `urlFix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-topersian--default)
 
 ```html
-<span v-url-fix>...</span>
-<input :value="text" v-url-fix.sync />
+<span v-url-fix>...</span> <input :value="text" v-url-fix.sync />
+```
+
+<br />
+
+---
+
+### `addOrdinalSuffix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-addordinalsuffix--default)
+
+```html
+<span v-add-ordinal-suffix>...</span> <input :value="text" v-add-ordinal-suffix.sync />
+```
+
+<br />
+
+---
+
+### `removeOrdinalSuffix directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-removeordinalsuffix--default)
+
+```html
+<span v-remove-ordinal-suffix>...</span> <input :value="text" v-remove-ordinal-suffix.sync />
+```
+
+<br />
+
+---
+
+### `numberToWords directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-numbertowords--default)
+
+```html
+<span v-number-to-words>...</span> <input :value="text" v-number-to-words.sync />
+```
+
+<br />
+
+---
+
+### `wordsToNumber directive` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/directives-wordsToNumber--default)
+
+**modifires**:
+<br />
+`addCommas`, `fuzzy`
+<br />
+**argument**:
+<br />
+`digits`: 'fa' | 'en' | 'ar'
+
+```html
+<span v-words-to-number:fa.addCommas>...</span> <input :value="text" v-words-to-number:en.fuzzy.sync />
 ```
 
 <br />
