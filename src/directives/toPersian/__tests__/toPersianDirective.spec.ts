@@ -10,11 +10,11 @@ describe("toPersian", () => {
         template: "<div v-to-persian>{{val}}</div>"
     };
     it("should convert to persian chars", async () => {
-        const url = `كيك`;
+        const text = `كيك`;
 
         const wrapper = mount(cmp, {
             propsData: {
-                val: url
+                val: text
             }
         });
 
@@ -33,11 +33,11 @@ describe("toPersian", () => {
         template: "<input v-to-persian.sync />"
     };
     it("should replace convert to persian chars in typing", async () => {
-        const url = `كيك`;
+        const text = `كيك`;
 
         const wrapper = mount(cmpSync);
         const input = wrapper.find("input");
-        await input.setValue(url);
+        await input.setValue(text);
 
         expect(wrapper.find("input").element.value).toBe("کیک");
     });

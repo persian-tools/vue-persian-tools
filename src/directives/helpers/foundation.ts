@@ -1,14 +1,19 @@
 import { isVue3 } from "vue-demi";
 import { Directive, DirectiveBinding } from "./utils";
 
-type Function = (str: string) => string | undefined;
+type Function = (str: string, ...args: any[]) => string | undefined;
+type Custom = {
+    before?: (param: any[], binding: DirectiveBinding) => void;
+    after?: (param: any[], binding: DirectiveBinding) => void;
+};
 
-export default (func: Function, name: string) => {
+export default (func: Function, name: string, custom: Custom = {}): Directive => {
+    let params: any[];
     const setElementText = (el: HTMLInputElement | HTMLElement) => {
         if ((el as HTMLInputElement).value) {
-            (el as HTMLInputElement).value = func((el as HTMLInputElement).value) as string;
-        } else {
-            el.textContent = func(el.textContent as string) as string;
+            (el as HTMLInputElement).value = func((el as HTMLInputElement).value, ...params) as string;
+        } else if (el.textContent) {
+            el.textContent = func(el.textContent, ...params) as string;
         }
     };
     const inputEvent = (e: Event) => {
@@ -19,7 +24,10 @@ export default (func: Function, name: string) => {
     };
 
     function mounted(el: HTMLInputElement | HTMLElement, binding: DirectiveBinding) {
+        params = [];
+        if (custom.before) custom.before(params, binding);
         setElementText(el);
+        if (custom.after) custom.after(params, binding);
         if (binding.modifiers.sync) {
             el.addEventListener("input", inputEvent);
         }
@@ -30,21 +38,5 @@ export default (func: Function, name: string) => {
         }
     }
 
-    let directive: Directive;
-
-    if (isVue3) {
-        directive = {
-            mounted,
-            unmounted,
-            name
-        };
-    } else {
-        directive = {
-            bind: mounted,
-            unbind: unmounted,
-            name
-        };
-    }
-
-    return directive;
+    return isVue3 ? { mounted, unmounted, name } : { bind: mounted, unbind: unmounted, name };
 };

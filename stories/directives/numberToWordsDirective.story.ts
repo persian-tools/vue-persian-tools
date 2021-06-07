@@ -1,31 +1,30 @@
-import urlFix from "../../src/directives/URLfix/index";
+import numberToWords from "../../src/directives/numberToWords/index";
+
 const Template = (args: any) => ({
-    directives: { urlFix: urlFix },
+    directives: { numberToWords: numberToWords },
     setup() {
         return {
             text: args.val
         };
     },
     template: `<div>
-        <div><strong>URL:</strong> {{text}}</div>
+        <div><strong>Number:</strong> {{text}}</div>
         <br />
-        <div><strong>Fixed URL:</strong> <span v-url-fix>{{text}}</span></div>
-        <br />
-        <input :value="text" v-url-fix.sync />
+        <div><strong>Text:</strong> <span v-number-to-words>{{text}}</span></div>
     </div>`
 });
 
 export const Default = Template.bind({});
-Default.args = { val: "https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%A7%D9%88%DB%8C%DA%A9%DB%8C:Gadget-Extra-Editbuttons-botworks.js" };
+Default.args = { val: "500,443" };
 
 export default {
-    title: "Directives/URLfix",
+    title: "Directives/numberToWords",
     argTypes: {
         val: {
             name: "str",
             type: { name: "string", required: true },
             defaultValue: null,
-            description: "url that need to be fixed",
+            description: "Convert numbers to text.",
             table: {
                 type: { summary: "string" },
                 defaultValue: { summary: "null" }
