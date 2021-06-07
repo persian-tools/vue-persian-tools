@@ -66,6 +66,15 @@ by default only components will install globally. by passing `directives: true` 
 }
 ```
 
+Also you can install some components or directives globally.
+
+```js
+{
+    components: ['isPersian'],
+    directives: ['halfSpace'],
+}
+```
+
 Or import directives or components locally
 
 ```js

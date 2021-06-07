@@ -25,4 +25,17 @@ describe("plugin", () => {
 
         expect(app._context.components).toEqual({});
     });
+    it("should install some directives and components globally", () => {
+        const app = createApp(App).use(plugin, {
+            components: ["isPersian", "test"],
+            directives: ["halfSpace"]
+        });
+        const components = app._context.components;
+        const directives = app._context.directives;
+
+        expect(components).toHaveProperty("isPersian");
+        expect(components).not.toHaveProperty("halfSpace");
+        expect(directives).toHaveProperty("halfSpace");
+        expect(directives).not.toHaveProperty("URLfix");
+    });
 });

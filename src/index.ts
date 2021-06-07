@@ -17,17 +17,27 @@ const plugin: Plugin = {
 
         const opts = { ..._defaultOptions, ...options };
 
-        if (opts.components) {
+        if (opts.components === true) {
             // install components
             Object.values(components).forEach(cmp => {
                 Vue.component(cmp.name, cmp);
             });
+        } else if (Array.isArray(opts.components)) {
+            opts.components.forEach(cmp => {
+                cmp = (components as any)[cmp];
+                if (cmp) Vue.component(cmp.name, cmp);
+            });
         }
 
-        if (opts.directives) {
+        if (opts.directives === true) {
             // install directives
             Object.values(directives).forEach(directive => {
                 Vue.directive(directive.name, directive);
+            });
+        } else if (Array.isArray(opts.directives)) {
+            opts.directives.forEach(directive => {
+                directive = (directives as any)[directive];
+                if (directive) Vue.directive(directive.name, directive);
             });
         }
     }
