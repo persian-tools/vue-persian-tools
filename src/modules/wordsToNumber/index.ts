@@ -1,5 +1,5 @@
 import { defineComponent, h } from "vue-demi";
-import { WordsToNumber } from "@persian-tools/persian-tools";
+import { wordsToNumber } from "@persian-tools/persian-tools";
 import { getSlot } from "../helpers/getSlot.skip";
 import tag from "../helpers/tagPropMixin.skip";
 
@@ -23,7 +23,7 @@ export default defineComponent({
     },
     computed: {
         convertToNumbers(): string {
-            return WordsToNumber.convert(this.words, {
+            return wordsToNumber(this.words, {
                 digits: this.digits as WordsToNumberOptionsDigits,
                 fuzzy: this.fuzzy,
                 addCommas: this.addCommas
