@@ -451,6 +451,32 @@ every component accept a `tag` prop. you can use it to customize component html 
 
 ---
 
+### `plate` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-plate--default)
+
+**slots**:
+<br />
+`number`: String | PlateOptions
+
+```html
+<plate number="12D45147" v-slot="{ info, isValid }">{{ info }} | {{ isValid }}</wordsToNumber>
+```
+
+<br />
+
+---
+
+### `timeAgo` [See details](https://persian-tools.github.io/vue-persian-tools/?path=/docs/modules-timeago--default)
+
+**slots**:
+<br />
+`date`: String
+
+```html
+<plate date="1400/04/07 18:00:00" v-slot="{ time }">{{ time }}</wordsToNumber>
+```
+
+<br />
+
 ## directives
 
 all directives have sync modifiers. using this modifier will enable reactive data in your directive.
