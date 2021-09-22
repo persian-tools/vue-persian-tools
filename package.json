@@ -5,14 +5,9 @@
     "description": "Persian tools wrapper for vue.js",
     "author": "mediv0<mahdi.wtf>",
     "license": "MIT",
-    "main": "dist/persianTools.cjs.js",
-    "browser": "dist/persianTools.esm-browser.prod.js",
-    "module": "dist/persianTools.esm-browser.prod.js",
-    "unpkg": "dist/persianTools.global.prod.js",
-    "jsdelivr": "dist/persianTools.global.prod.js",
+    "main": "./dist/index",
     "types": "./dist/index.d.ts",
     "files": [
-        "src/*",
         "dist/*"
     ],
     "homepage": "https://github.com/persian-tools/vue-persian-tools",
@@ -95,6 +90,7 @@
         "prettier": "^1.19.1",
         "rollup": "^2.40.0",
         "rollup-plugin-generate-declarations": "^1.1.1",
+        "rollup-plugin-multi-input": "^1.3.1",
         "rollup-plugin-terser": "^7.0.2",
         "standard-version": "^9.1.1",
         "typescript": "~3.9.3",

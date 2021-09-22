@@ -10,7 +10,7 @@ const files = ["dist/persianTools.esm-browser.js", "dist/persianTools.esm-browse
 
 async function run() {
     await build();
-    checkAllSizes();
+    // checkAllSizes();
 }
 
 async function build() {

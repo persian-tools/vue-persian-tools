@@ -4,6 +4,7 @@ import { terser } from "rollup-plugin-terser";
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import multiInput from 'rollup-plugin-multi-input';
 import pkg from "../package.json";
 import replace from "@rollup/plugin-replace";
 import generateDeclarations from 'rollup-plugin-generate-declarations';
@@ -17,50 +18,17 @@ const banner = `/*!
   */`;
 
 
-  const entry = "src/index.ts";
+const entry = ["src/index.ts", "src/directives/index.ts", "src/modules/index.ts"];
 const packageName = "persianTools";
 
 const configs = [
     {
         input: entry,
-        file: `dist/${packageName}.esm-browser.js`,
-        format: "es",
-        browser: true,
-        env: "development"
-    },
-    {
-        input: entry,
-        file: `dist/${packageName}.esm-browser.prod.js`,
         minify: true,
         format: "es",
         browser: true,
         env: "production"
     },
-    {
-        input: entry,
-        file: `dist/${packageName}.esm-bundler.js`,
-        format: "es",
-        env: "development"
-    },
-    {
-        input: entry,
-        file: `dist/${packageName}.global.js`,
-        format: "iife",
-        env: "development"
-    },
-    {
-        input: entry,
-        file: `dist/${packageName}.global.prod.js`,
-        format: "iife",
-        minify: true,
-        env: "production"
-    },
-    {
-        input: entry,
-        file: `dist/${packageName}.cjs.js`,
-        format: "cjs",
-        env: "development"
-    }
 ];
 
 function createEntry(config) {
@@ -70,8 +38,9 @@ function createEntry(config) {
         plugins: [],
         output: {
             banner,
-            file: config.file,
-            format: config.format,
+            // file: config.file,
+            dir: "dist",
+            format: "esm",
             globals: {
                 // vue: "Vue",
                 'vue-demi': 'VueDemi'
@@ -106,6 +75,8 @@ function createEntry(config) {
         );
     }
 
+    c.plugins.push(multiInput());
+
     c.plugins.push(
         resolve({
             extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"]
@@ -122,8 +93,4 @@ function createEntry(config) {
     return c;
 }
 
-function createEntries() {
-    return configs.map(c => createEntry(c));
-}
-
-export default createEntries();
+export default createEntry(configs[0])
