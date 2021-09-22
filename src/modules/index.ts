@@ -20,3 +20,5 @@ export { default as removeCommas } from "./commas/remove";
 export { default as digits } from "./digits";
 export { default as bill } from "./Bill";
 export { default as phoneNumber } from "./phoneNumber";
+export { default as plate } from "./plate";
+export { default as timeAgo } from "./timeAgo";
