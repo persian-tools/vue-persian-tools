@@ -458,7 +458,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 `number`: String | PlateOptions
 
 ```html
-<plate number="12D45147" v-slot="{ info, isValid }">{{ info }} | {{ isValid }}</wordsToNumber>
+<plate number="12D45147" v-slot="{ info, isValid }">{{ info }} | {{ isValid }}</plate>
 ```
 
 <br />
@@ -472,7 +472,7 @@ every component accept a `tag` prop. you can use it to customize component html 
 `date`: String
 
 ```html
-<plate date="1400/04/07 18:00:00" v-slot="{ time }">{{ time }}</wordsToNumber>
+<timeAgo date="1400/04/07 18:00:00" v-slot="{ time }">{{ time }}</timeAgo>
 ```
 
 <br />
