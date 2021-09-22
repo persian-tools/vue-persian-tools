@@ -53,7 +53,7 @@
         "release:patch": "standard-version \"--release-as\" \"patch\""
     },
     "dependencies": {
-        "@persian-tools/persian-tools": "^1.6.1",
+        "@persian-tools/persian-tools": "3.0.1",
         "vue-demi": "^0.7.1"
     },
     "devDependencies": {

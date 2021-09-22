@@ -1505,10 +1505,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@persian-tools/persian-tools@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@persian-tools/persian-tools/-/persian-tools-1.6.1.tgz#57d6424490702249f369380f8295d447b5ecceed"
-  integrity sha512-eiK1GV6Z0e5tKNcQmp3Qv9LFZXB5FppICe91LjFGRZfzatJthIPPWyCCXtfFcMhYNgbrEcxlhCBLqDy41W8Idg==
+"@persian-tools/persian-tools@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@persian-tools/persian-tools/-/persian-tools-3.0.1.tgz#66a0ef3a614dec1cd8a65e2e9ba6ee1e9e91ec91"
+  integrity sha512-26XGQWjrfSY4SQlXXG7hNgTetItjCYVxuqKbhONrgmv+6B9PlaILVOwFydkISpK2u4iBE+CXfxUCD1HmpiMeUA==
   dependencies:
     fastest-levenshtein "^1.0.12"
 
