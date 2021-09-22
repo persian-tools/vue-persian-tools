@@ -1,7 +1,7 @@
 import { isVue3 } from "vue-demi";
 import { Directive, DirectiveBinding } from "./utils";
 
-type Function = (str: string, ...args: any[]) => string | undefined;
+type Function = (str: string, ...args: any[]) => string | undefined | never | TypeError;
 type Custom = {
     before?: (param: any[], binding: DirectiveBinding) => void;
     after?: (param: any[], binding: DirectiveBinding) => void;

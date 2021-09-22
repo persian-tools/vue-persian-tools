@@ -1,5 +1,5 @@
 import { defineComponent, h } from "vue-demi";
-import { NumberToWords } from "@persian-tools/persian-tools";
+import { numberToWords } from "@persian-tools/persian-tools";
 import { getSlot } from "../helpers/getSlot.skip";
 import tag from "../helpers/tagPropMixin.skip";
 
@@ -8,13 +8,13 @@ export default defineComponent({
     mixins: [tag],
     props: {
         number: {
-            type: [String, BigInt, Number],
+            type: [String, Number],
             required: true
         }
     },
     computed: {
         convertToWords(): string {
-            return NumberToWords.convert(this.number);
+            return numberToWords(this.number).toString();
         }
     },
 
