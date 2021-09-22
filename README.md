@@ -78,11 +78,14 @@ You can also install components & directives globally by their names.
 Or import them locally
 
 ```js
-import { toPersianDirective, halfSpace } from "@persian-tools/vue-persian-tools";
+// import components from module directory
+import { halfSpace } from "@persian-tools/vue-persian-tools/dist/modules";
+// import directives from directive directory
+import { numberToWords, removeOrdinalSuffix } from "@persian-tools/vue-persian-tools/dist/directives";
 
 export default {
     // install locally
-    directives: { toPersianDirective },
+    directives: { numberToWords, removeOrdinalSuffix },
     components: { halfSpace }
 };
 ```
