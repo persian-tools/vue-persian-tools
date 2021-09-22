@@ -1,5 +1,5 @@
 import { defineComponent, h } from "vue-demi";
-import { Sheba } from "@persian-tools/persian-tools";
+import { isShebaValid, getShebaInfo } from "@persian-tools/persian-tools";
 import { getSlot } from "../helpers/getSlot.skip";
 import tag from "../helpers/tagPropMixin.skip";
 import { ShebaResult } from "@persian-tools/persian-tools/build/modules/sheba";
@@ -15,10 +15,10 @@ export default defineComponent({
     },
     computed: {
         isValid(): boolean {
-            return new Sheba(this.shebaCode!).validate();
+            return isShebaValid(this.shebaCode);
         },
         info(): ShebaResult | null {
-            return new Sheba(this.shebaCode!).recognize();
+            return getShebaInfo(this.shebaCode);
         }
     },
 

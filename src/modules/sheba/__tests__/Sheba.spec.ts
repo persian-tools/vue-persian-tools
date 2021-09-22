@@ -43,7 +43,9 @@ describe("Sheba info(recognize)", () => {
         name: "Parsian Bank",
         persianName: "بانک پارسیان",
         code: "054",
-        accountNumberAvailable: true
+        accountNumberAvailable: true,
+        accountNumber: "020817909002",
+        formattedAccountNumber: "002-00817909-002"
     };
     it("should return info if sheba is valid", () => {
         const wrapper = mount(cmp, {
