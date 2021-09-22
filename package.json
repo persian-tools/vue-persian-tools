@@ -1,6 +1,6 @@
 {
     "name": "@persian-tools/vue-persian-tools",
-    "version": "0.13.0",
+    "version": "0.14.0",
     "private": false,
     "description": "Persian tools wrapper for vue.js",
     "author": "mediv0<mahdi.wtf>",
