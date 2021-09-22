@@ -38,8 +38,7 @@ describe("digits", () => {
                 val: "600"
             }
         });
-
-        expect(wrapper.html()).toMatch("٦۰۰");
+        expect(wrapper.html().includes("٦٠٠")).toBe(true);
     });
 
     it("should convert from ar to fa", async () => {
